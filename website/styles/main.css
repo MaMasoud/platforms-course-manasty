@@ -1,0 +1,144 @@
+/* Start Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --neutral-3: #262F44;
+    
+    --neutral-7: #C6D0E0;
+    --neutral-8: #E0E6EE;
+    --neutral-9: #EEF4FA;
+    --neutral-10: #F6F8FC;
+
+    --blue-3: #2E6FF4;
+
+    --sec-1: #E0B51D;
+    --sec-2: #F4CB3C;
+
+    --grid-blue: linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Header */
+header {
+    background: var(--neutral-10, #F6F8FC);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+header nav h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--blue-3, #2E6FF4);
+}
+
+::-webkit-scrollbar {
+    width: .7rem;
+   }
+   
+  ::-webkit-scrollbar-track {
+    border-radius: .9rem;
+    }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--sec-2);
+    border-radius: 1rem;
+    
+  }
+   
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--sec-1)
+  }
+   
+  /* for Firefox */
+   /* html {scrollbar-color: #9e4673 #3d4a59;}  */
+   @keyframes wiggle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    75% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .element-to-wiggle {
+    animation: wiggle 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  }
+.main-lable {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 59px;
+    background: var(--blue-3, #2E6FF4);
+    width: fit-content;
+}
+.main-lable .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--sec-2, #F4CB3C);
+}
+.main-lable h3 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 15px;
+}
