@@ -66,6 +66,7 @@ header nav .header-info .user-info {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    position: relative;
 }
 header nav .header-info .user-info .wallet {
     display: flex;
@@ -75,11 +76,91 @@ header nav .header-info .user-info .wallet {
     color: var(--neutral-3, #262F44);
     font-size: 14px;
     font-weight: 600;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+header nav .header-info .user-info .wallet:hover {
+    background-color: var(--neutral-8, #F2F4F8);
 }
 header nav .header-info .user-info .notification {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wallet-info {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid var(--neutral-7, #C6D0E0);
+    background: var(--neutral-9, #EEF4FA);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    gap: 25px;
+
+    /* drop */
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+    display: none;
+}
+.wallet-info h3 {
+    color: var(--neutral-3, #262F44);
+    font-size: 16px;
+    font-weight: 600;
+}
+.wallet-info .add-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    gap: 10px;
+    border-radius: 34px;
+    background: var(--neutral-8, #E0E6EE);
+}
+.wallet-info .add-code input {
+    color: var(--neutral-5, #58647C);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    height: 30px;
+}
+.wallet-info .add-code input:focus {
+    outline: none;
+    border: none;
+}
+.wallet-info .add-code .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.wallet-info .add-code .icon:hover {
+    opacity: 0.8;
+}
+.wallet-info .check {
+    padding: 0px 10px;
+    border-radius: 5px;
+    background: var(--blue-3, #2E6FF4);
+    color: var(--neutral-9, #EEF4FA);
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    font-family: Noto Sans Arabic;
+}
+.wallet-info .check:hover {
+    opacity: 0.8;
 }
 main {
     display: flex;
