@@ -19,78 +19,101 @@ function sendTwoSecScreen(screen){
     }
 }
 
+function erorrScreen(id) {
+    document.getElementById(id).focus();
+        document.getElementById(id).style.border = "2px solid #E62836";
+}
+
 function validate(username, password1, password2, email) 
 {
     if (username == ""){
-        alert("Please enter a username");
+        message("Please enter a username");
+        erorrScreen("username");
         return;
     }
     if (email == ""){
-        alert("Please enter an email");
+        message("Please enter an email");
+        erorrScreen("email");
         return;
     }
     if (password1 == ""){
-        alert("Please enter a password");
+        message("Please enter a password");
+        erorrScreen("password1");
         return;
     }
     if (password2 == ""){
-        alert("Please confirm your password");
+        message("Please confirm your password");
+        erorrScreen("password2");
         return;
     }
     if (password1 != password2){
-        alert("Passwords do not match");
+        message("Passwords do not match");
+        erorrScreen("password1");
         return;
     }
     if (password1.length < 8){
-        alert("Password must be at least 8 characters long");
+        message("Password must be at least 8 characters long");
+        erorrScreen("password1");
         return;
     }
     if (password1.length > 20){
-        alert("Password must be less than 20 characters long");
+        message("Password must be less than 20 characters long");
+        erorrScreen("password1");
         return;
     }
     if (username.length > 50){
-        alert("Username must be less than 50 characters long");
+        message("Username must be less than 50 characters long");
+        erorrScreen("username");
         return;
     }
     if (username == email){
-        alert("Username and email cannot be the same");
+        message("Username and email cannot be the same");
+        erorrScreen("email");
         return;
     }
     if (email.length > 50){
-        alert("Email must be less than 50 characters long");
+        message("Email must be less than 50 characters long");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf("@") == -1){
-        alert("Email must contain an @");
+        message("Email must contain an @");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf(".") == -1){
-        alert("Email must contain a .");
+        message("Email must contain a .");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf("@") == 0){
-        alert("Email must contain a username");
+        message("Email must contain a username");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf(".") == 0){
-        alert("Email must contain a domain");
+        message("Email must contain a domain");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf("@") == email.length - 1){
-        alert("Email must contain a domain");
+        message("Email must contain a domain");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf(".") == email.length - 1){
-        alert("Email must contain a domain");
+        message("Email must contain a domain");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf("@") != email.lastIndexOf("@")){
-        alert("Email must contain only one @");
+        message("Email must contain only one @");
+        erorrScreen("email");
         return;
     }
     if (email.indexOf(".") != email.lastIndexOf(".")){
-        alert("Email must contain only one .");
+        message("Email must contain only one .");
+        erorrScreen("email");
         return;
     }
     return true;
@@ -126,4 +149,10 @@ function selectTaqasous(button, taqasous) {
 
     // Add 'selected' class to the clicked button
     button.classList.add('taqasous-button-selected');
+}
+
+function message(message){
+    document.getElementById("message").innerHTML = message;
+    document.getElementById("message").style.display = "block";
+    setTimeout(function(){ document.getElementById("message").style.display = "none"; }, 5000);
 }

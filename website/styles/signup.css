@@ -28,6 +28,16 @@ body {
     padding: 50px 30px;
     text-align: center;
 }
+#message {
+    background-color: var(--Error-3, #E62836);
+    color: var(--neutral-9, #EEF4FA);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: none;
+}
 .login-section .login-container h2 {
     font-size: 24px;
     font-weight: 700;
