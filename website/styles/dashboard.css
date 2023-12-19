@@ -209,7 +209,7 @@ main .content {
     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
-    overflow: scroll;
+    overflow-y: auto;
 }
 @media (max-width: 992px) {
     header nav .logo {
@@ -259,7 +259,7 @@ main .content {
     text-align: center;
 }
 .complete-your-courses {
-
+    padding: 50px 0px;
 }
 .courses {
     margin-top: 50px;
