@@ -1,6 +1,6 @@
-function selectCategory(button, elsana) {
+function selectCategory(button) {
     // Remove 'selected' class from all buttons
-    var buttons = document.querySelectorAll('button.category');
+    var buttons = document.querySelectorAll('.category');
     buttons.forEach(function (btn) {
       btn.classList.remove('selected');
     });

@@ -90,8 +90,8 @@ header nav .header-info .user-info .notification {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 10px 10px;
+    border-radius: 50%;
     transition: all 0.3s ease-in-out;
     position: relative;
 }
