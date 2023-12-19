@@ -65,7 +65,7 @@ header nav .header-info .user-info {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     position: relative;
 }
 header nav .header-info .user-info .wallet {
@@ -90,6 +90,12 @@ header nav .header-info .user-info .notification {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+header nav .header-info .user-info .notification:hover {
+    background-color: var(--neutral-8, #F2F4F8);
 }
 .wallet-info {
     position: absolute;
@@ -250,6 +256,15 @@ main .content {
         margin-right: 54px;
     }
 }
+
+
+
+
+
+
+
+
+
 
 .header-dashboard {
     color: var(--Neutral-3, #262F44);
