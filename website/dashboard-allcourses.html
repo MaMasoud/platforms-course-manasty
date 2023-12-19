@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/dashboard-allcourses.css">
+</head>
+<body dir="rtl">
+    <header>
+        <nav>
+            <div class="logo">
+                <h3>منصتي</h3>
+                <img style="width: 40px; height: 40px" src="../asseds/images/logo.png" />
+            </div>
+            <div class="header-info">
+                <div class="account">
+                    <div class="photo">
+                        <img src="../asseds/images/avatar.jpg" />
+                    </div>
+                    <div class="username">
+                        <h5 class="welcome">مساء الخير</h5>
+                        <h5 class="name">محمد هاني احمد</h5>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <button class="wallet" onclick="showWallet()">
+                        <img src="../asseds/icons/solar_wallet-linear.svg" />
+                        <h5>120 جنيه</h5>
+                    </button>
+                    <div class="wallet-info" id="wallet-info-id">
+                        <h3>إضافة كود جديد</h3>
+                        <div class="add-code">
+                            <input type="text" name="add-code" placeholder="أكتب كود الشراء هنا" />
+                            <button class="icon">
+                                <img src="/asseds/icons/gala_add.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="check">تحقق من الكود</button>
+                    </div>
+                    <a class="notification" href="notification.html">
+                        <img src="../asseds/icons/ph_bell-bold.svg" />
+                        <h5>5</h5>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="sidebar">
+            <div class="top">
+                <a class="sidebar-item selected" href="#">
+                    <img src="../asseds/icons/iconamoon_home.svg" />
+                    <h5>الرئيسية</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/lets-icons_video.svg" />
+                    <h5>كورساتي</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/mingcute_question-line.svg" />
+                    <h5>بنك الاسئلة</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/carbon_course.svg" />
+                    <h5>كل الكورسات</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/mingcute_fast-rewind-line.svg" />
+                    <h5>المراجعات</h5>
+                </a>
+            </div>
+            <div class="bottom">
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/bx_support.svg" />
+                    <h5>مساعدة</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/carbon_settings.svg" />
+                    <h5>الاعدادات</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/ci_exit.svg" />
+                    <h5>خروج</h5>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header-dashboard">
+                <h1>كل الكورسات</h1>
+            </div>
+           <div class="categories">
+                <button class="category selected">كل المواد </button>
+                <button class="category">اللغة العربية</button>
+                <button class="category">مواد شرعية</button>
+                <button class="category">كمياء</button>
+                <button class="category">فيزياء</button>
+                <button class="category">أحياء</button>
+                <button class="category">جغرافيا</button>
+                <button class="category">فرنساوي</button>
+                <button class="category">إنجليزي</button>
+           </div>
+        </div>
+    </main>
+    <script src="./javascript/dashboard.js"></script>         
+    <script src="./javascript/dashboard-allcourses.js"></script>         
+</body>
+</html>
