@@ -1,0 +1,19 @@
+.privacy-policy {
+    padding: 50px 0;
+}
+.privacy-policy h1, .privacy-policy h2, .privacy-policy p {
+    color: var(--neutral-3);
+}
+.privacy-policy h1, .privacy-policy h2 {
+    margin: 1rem 0 0.5rem 0;
+}
+.privacy-policy p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--neutral-3);
+}
+.privacy-policy ul li {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--neutral-3);
+}
