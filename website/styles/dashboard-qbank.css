@@ -6,6 +6,7 @@
 }
 .q-bank img {
     width: 50%;
+    max-width: 500px;
 }
 .q-bank h1 {
     font-size: 2.5rem;
