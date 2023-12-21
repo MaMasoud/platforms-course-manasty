@@ -280,3 +280,30 @@ main .content {
     margin: 20px auto;
     text-align: center;
 }
+.notification-card {
+    position: fixed;
+    bottom: 20px;
+    left: -300px;
+    z-index: 9999;
+    width: 300px;
+    transition: all 0.3s ease-in-out;
+}
+.notification-card a{
+    display: flex;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--blue-5, #EFF5FD);
+    background: var(--blue-3, #2E6FF4);
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+}
+.notification-card p {
+    color: var(--Wraning-5, #FDFDEA);
+    font-family: Noto Sans Arabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
