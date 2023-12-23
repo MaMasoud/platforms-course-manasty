@@ -118,7 +118,7 @@ header nav .header-info .user-info .notification h5 {
     position: absolute;
     top: 60px;
     left: 0;
-    width: 300px;
+    width: fit-content;
     border-radius: 10px;
     border: 1px solid var(--neutral-7, #C6D0E0);
     background: var(--neutral-9, #EEF4FA);
@@ -143,31 +143,50 @@ header nav .header-info .user-info .notification h5 {
     align-items: center;
     padding: 5px 15px;
     gap: 10px;
-    border-radius: 34px;
-    background: var(--neutral-8, #E0E6EE);
 }
-.wallet-info .add-code input {
-    color: var(--neutral-5, #58647C);
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    background-color: transparent;
+.wallet-info .add-code .codes{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.wallet-info .add-code .codes .dash {
+    width: 10px;
+    height: 2px;
+    border-radius: 14px;
+    background: var(--Neutral-6, #8D98AF);
+}
+.wallet-info .add-code input[type="text"] {
+    width: 20px;
     height: 30px;
+    border-radius: 3px;
+    background: var(--Neutral-8, #E0E6EE);
+    border: none;
+    text-align: center;
 }
-.wallet-info .add-code input:focus {
+.wallet-info .add-code input[type="text"]:focus {
     outline: none;
     border: none;
 }
-.wallet-info .add-code .icon {
+.wallet-info .add-code .paste-code {
+    border-radius: 5px;
+    background: var(--blue-1, #11247D);
     display: flex;
+    padding: 0px 10px;
     justify-content: center;
     align-items: center;
-    border: none;
-    background: none;
+    gap: 5px;
     cursor: pointer;
+    border: none;
 }
-.wallet-info .add-code .icon:hover {
-    opacity: 0.8;
+.wallet-info .add-code .paste-code span{
+    color: var(--Neutral-9, #EEF4FA);
+    font-family: Noto Sans Arabic;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-wrap: nowrap;  
 }
 .wallet-info .check {
     padding: 0px 10px;
