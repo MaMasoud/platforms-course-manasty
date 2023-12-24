@@ -78,8 +78,8 @@
 }
 .q-a .q-a-items .q-a-item .q h4 {
     color: var(--Neutral-3, #262F44);
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
 }
 .q-a .q-a-items .q-a-item .q .arrow {
     transition: all 0.3s ease-in-out;
@@ -90,8 +90,8 @@
 .q-a .q-a-items .q-a-item .a {
     display: none;
     color: var(--Neutral-4, #4B5D7A);
-    font-size: 14px;
-    Font-weight: 500;
+    font-size: 16px;
+    Font-weight: 600;
     line-height: 1.5;
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
