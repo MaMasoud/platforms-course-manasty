@@ -1,0 +1,27 @@
+body {
+    background: var(--grid-blue);
+}
+main .container {
+    text-align: center;
+    height: calc(100vh - 70px);
+    padding: 50px 0px;
+}
+main .container img {
+    width: 100%;
+    max-width: 600px;
+}
+main .container h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 20px 0px;
+    color: var(--neutral-10);
+}
+main .container a {
+    background: var(--sec-2);
+    color: var(--neutral-1);
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
