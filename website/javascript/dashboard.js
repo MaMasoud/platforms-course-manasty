@@ -55,18 +55,6 @@ function handlePaste(index, event) {
 
 }
 
-// function pasteText() {
-//     // Get the pasted text
-//     const pastedText = prompt("Paste your text:");
-    
-//     // Distribute pasted text among input fields
-//     for (let i = 0; i < pastedText.length && i < 12; i++) {
-//         const inputField = document.querySelector(`.otp-input:nth-child(${i + 1})`);
-//         if (inputField) {
-//             inputField.value = pastedText[i].replace(/\D/g, '');
-//         }
-//     }
-// }
 
 async function pasteText() {
     try {
