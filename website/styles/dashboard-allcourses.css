@@ -17,6 +17,8 @@
     background: var(--Neutral-6, #8D98AF);
     border: none;
     cursor: pointer;
+    flex-grow: 1;
+    flex-basis: 120px;
 }
 .categories button.category.selected {
     background: var(--blue-3, #2E6FF4);
