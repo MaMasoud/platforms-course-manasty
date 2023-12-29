@@ -281,10 +281,10 @@ main .content {
     margin-bottom: 20px;
 }
 .content .description p {
-    color: var(--Neutral-4, #3B4459);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
+    color: var(--Neutral-5, #58647C);
+    font-size: 16px;
+    font-weight: 500;
+    /* line-height: 1.5; */
 }
 /* ----------------------------------------------------------- */
 
