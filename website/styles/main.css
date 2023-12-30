@@ -13,6 +13,8 @@
     --sec-1: #E0B51D;
     --sec-2: #F4CB3C;
 
+    --Error-3: #E62836;
+
     --grid-blue: linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%);
 }
 * {
