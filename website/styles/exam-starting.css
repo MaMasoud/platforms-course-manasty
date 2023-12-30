@@ -1,0 +1,53 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px);
+}
+.content .exam-info {
+    padding: 15px 50px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid var(--Neutral-6, #8D98AF);
+    background: var(--Neutral-9, #EEF4FA);
+}
+.content .exam-info .name-exam {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--Neutral-3, #262F44);
+}
+.content .exam-info .name-course {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Neutral-5, #58647C);
+}
+.content .exam-info .info-exam-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.content .exam-info .info-exam-cards .info-exam-card {
+    padding: 0px 15px;
+    border-radius: 28px;
+    border: 1px solid var(--Neutral-7, #C6D0E0);
+    background: var(--Neutral-8, #E0E6EE);
+    color: var(--Neutral-4, #3B4459);
+    font-size: 16px;
+    font-weight: 500;
+}
+.content .exam-info .start-exam {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 0px 20px;
+    border-radius: 26px;
+    background: var(--blue-3, #2E6FF4);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Neutral-10, #F6F8FC);
+    transition: all 0.3s ease-in-out;
+}
+.content .exam-info .start-exam:hover {
+    opacity: 0.8;
+}

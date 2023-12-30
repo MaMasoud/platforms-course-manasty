@@ -93,3 +93,8 @@ listElements.forEach(listElement => {
         }
     })
 });
+
+//block right click
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});

@@ -210,7 +210,7 @@ main .content {
 .content .video {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Set maximum width to 1200px */
+    max-width: 1400px; /* Set maximum width to 1200px */
     margin: 0 auto; /* Center the container horizontally */
     aspect-ratio: 16 / 9;
 }
