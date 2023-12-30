@@ -38,3 +38,49 @@ function backQuestion() {
         currentQuestionSpan.innerHTML = currentQuestionIndex;
     }
 }
+
+// function checkAllAnswers() {
+//     let allAnswered = true;
+//     for (let i = 1; i <= questionsNumber; i++) {
+//         const question = document.getElementById(`q${i}`);
+//         const answers = question.getElementsByClassName('answer');
+//         let answered = false;
+//         for (let j = 0; j < answers.length; j++) {
+//             if (answers[j].checked) {
+//                 answered = true;
+//                 break;
+//             }
+//         }
+//         if (!answered) {
+//             allAnswered = false;
+//             break;
+//         }
+//     }
+//     console.log(allAnswered);
+//     return allAnswered;
+// }
+
+
+
+function checkAllAnswers() {
+    let allAnswered = true;
+
+    for (let i = 1; i <= questionsNumber; i++) {
+        const question = document.getElementById(`q${i}`);
+        const answers = question.querySelectorAll('.answer input[name="answer' + i + '"]');
+        const selectedAnswer = [...answers].find(answer => answer.checked);
+
+        if (!selectedAnswer) {
+            // console.log(`Question ${i} is not answered.`);
+            allAnswered = false;
+        } else {
+            // console.log(`Question ${i}: Selected answer - ${selectedAnswer.value}`);
+        }
+    }
+
+    if (allAnswered) {
+        // console.log('All questions answered.');
+    }
+    
+    return allAnswered;
+}
