@@ -39,29 +39,6 @@ function backQuestion() {
     }
 }
 
-// function checkAllAnswers() {
-//     let allAnswered = true;
-//     for (let i = 1; i <= questionsNumber; i++) {
-//         const question = document.getElementById(`q${i}`);
-//         const answers = question.getElementsByClassName('answer');
-//         let answered = false;
-//         for (let j = 0; j < answers.length; j++) {
-//             if (answers[j].checked) {
-//                 answered = true;
-//                 break;
-//             }
-//         }
-//         if (!answered) {
-//             allAnswered = false;
-//             break;
-//         }
-//     }
-//     console.log(allAnswered);
-//     return allAnswered;
-// }
-
-
-
 function checkAllAnswers() {
     let allAnswered = true;
 
@@ -81,6 +58,6 @@ function checkAllAnswers() {
     if (allAnswered) {
         // console.log('All questions answered.');
     }
-    
+
     return allAnswered;
 }
