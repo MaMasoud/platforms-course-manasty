@@ -1,5 +1,5 @@
 let currentQuestionIndex = 1; // Initialize with the index of the first question
-let questionsNumber = document.getElementsByClassName('question-exam').length;
+let questionsNumber = document.getElementsByClassName('question-exam').length + document.getElementsByClassName('question-exam-textarea').length;
 let currentQuestionSpan = document.getElementById('q-num');
 let submetShow = false;
 
@@ -39,24 +39,38 @@ function backQuestion() {
     }
 }
 
+
 function checkAllAnswers() {
     let allAnswered = true;
 
     for (let i = 1; i <= questionsNumber; i++) {
         const question = document.getElementById(`q${i}`);
-        const answers = question.querySelectorAll('.answer input[name="answer' + i + '"]');
-        const selectedAnswer = [...answers].find(answer => answer.checked);
 
-        if (!selectedAnswer) {
-            // console.log(`Question ${i} is not answered.`);
-            allAnswered = false;
-        } else {
-            // console.log(`Question ${i}: Selected answer - ${selectedAnswer.value}`);
+        if (question.classList.contains('question-exam')) {
+            // Radio button question
+            const answers = question.querySelectorAll('.answer input[name="answer' + i + '"]');
+            const selectedAnswer = [...answers].find(answer => answer.checked);
+
+            if (!selectedAnswer) {
+                console.log(`Question ${i} is not answered.`);
+                allAnswered = false;
+            } else {
+                console.log(`Question ${i}: Selected answer - ${selectedAnswer.value}`);
+            }
+        } else if (question.classList.contains('question-exam-textarea')) {
+            // Textarea question
+            const textareaAnswer = document.getElementById(`q${i}-a`);
+            if (!textareaAnswer.value.trim()) {
+                console.log(`Question ${i} is not answered.`);
+                allAnswered = false;
+            } else {
+                console.log(`Question ${i}: Textarea answer - ${textareaAnswer.value}`);
+            }
         }
     }
 
     if (allAnswered) {
-        // console.log('All questions answered.');
+        console.log('All questions answered.');
     }
 
     return allAnswered;
