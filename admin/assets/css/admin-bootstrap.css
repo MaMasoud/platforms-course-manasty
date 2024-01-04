@@ -60,6 +60,7 @@
   --bs-dark-text-emphasis: #0F131B;
   --bs-dark-bg-subtle: #D4D5DA;
   --bs-dark-border-subtle: #A8ACB4;
+  --bs-body-color: #0F131B;
 }
 
 .btn-primary {
