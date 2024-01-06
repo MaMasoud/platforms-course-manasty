@@ -29,13 +29,13 @@
             <div id="content">
                 <nav class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light">
                     <div class="container-fluid">
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search" id="formSearch">
                             <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ..."><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
                         </form>
                         <ul class="navbar-nav flex-nowrap ms-auto">
                             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
                                 <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
-                                    <form class="me-auto navbar-search w-100">
+                                    <form class="me-auto navbar-search w-100" id="searchForm">
                                         <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
                                             <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
                                         </div>
@@ -64,7 +64,7 @@
 
 
                     <!-- Form for adding a course -->
-                    <form dir="rtl">
+                    <form dir="rtl" id="formAddCourse">
                         <div class="mb-3">
                             <label for="courseName" class="form-label">اسم الكورس</label>
                             <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
@@ -98,28 +98,36 @@
                             <label for="lessons" class="form-label">الدروس</label>
                             <div id="lessons">
                                 <!-- Lesson Inputs will be dynamically added here -->
-                                <div class="lesson ">
+                                <!-- <div class="lesson">
                                     <div class="card ">
                                         <div class="card-body">
                                             <div class="mb-3">
                                                 <label for="courseName" class="form-label">اسم الدرس</label>
                                                 <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
                                             </div>
-                                            <div id="lescont">
+                                            <!- Lesson content Inputs will be dynamically added here ->
+                                            <div id="lessonsContent">
                                                 <div class="card my-4 me-5 light-blue">
                                                     <div class="card-body">
                                                         <div class="mb-3">
-                                                            <label for="courseName" class="form-label">اسم الفيديو</label>
+                                                            <h4>اسم الفيديو</h4>
                                                             <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
+                                                            <hr>
+                                                            <h4>لينك الفيديو</h4>
+                                                            <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="https://www.youtube.com/embed/bqHc1hiNswI?si=1Lv79WhXeG3xl-SU">
+                                                            <div class="buttons mt-3 d-flex flex-row-reverse">
+                                                                <button type="button" class="btn btn-danger">حذف الفيديو</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="d-flex justify-content-between">
                                                 <div class="buttons">
-                                                    <button type="button" class="btn btn-primary ms-3">أضافة فيديو</button>
-                                                    <button type="button" class="btn btn-primary ms-3">أضافة أمتحان</button>
-                                                    <button type="button" class="btn btn-primary">أضافة ملف</button>
+                                                    <button type="button" class="btn btn-primary ms-3" onclick="addVideo()">أضافة فيديو</button>
+                                                    <button type="button" class="btn btn-primary ms-3" onclick="addExam()">أضافة أمتحان</button>
+                                                    <button type="button" class="btn btn-primary" onclick="addFile()">أضافة ملف</button>
                                                 </div>
                                                 <div class="buttons">
                                                     <button type="button" class="btn btn-danger">حذف الدرس</button>
@@ -127,7 +135,7 @@
                                             </div>
                                         </div>
                                       </div>
-                                </div>
+                                </div> -->
                             </div>
                             <button type="button" class="btn btn-secondary mt-5" onclick="addLesson()">إضافة درس</button>
                         </div>
@@ -177,6 +185,55 @@
                 output.src = reader.result;
             };
             reader.readAsDataURL(event.target.files[0]);
+        }
+        function addLesson() {
+            let lessons = document.getElementById("lessons");
+            let lessonNum = lessons.childElementCount + 1;
+            lessons.innerHTML += `<div class="lesson mt-5">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h3>اسم الدرس</h3>
+                            <input type="text" class="form-control form-control-lg" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
+                        </div>
+                        <!-- Lesson content Inputs will be dynamically added here -->
+                        <div id="lessonsContent${lessonNum}">
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="buttons">
+                                <button type="button" class="btn btn-primary ms-3" onclick="addVideo(${lessonNum})">أضافة فيديو</button>
+                                <button type="button" class="btn btn-primary ms-3" onclick="addExam(${lessonNum})">أضافة أمتحان</button>
+                                <button type="button" class="btn btn-primary" onclick="addFile(${lessonNum})">أضافة ملف</button>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" class="btn btn-danger">حذف الدرس</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>`;
+        }
+        function addVideo(lessonNum) {
+            let lessonsContent = document.getElementById("lessonsContent" + lessonNum);
+            let videoNum = lessonsContent.childElementCount + 1;
+            lessonsContent.innerHTML += `<div class="card my-4 me-5 light-blue">
+                <div class="card-body" id='video-${lessonNum}-${videoNum}'>
+                    <div class="mb-3">
+                        <h4>اسم الفيديو</h4>
+                        <input type="text" class="form-control form-control-lg" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
+                        <hr>
+                        <h4>لينك الفيديو</h4>
+                        <input type="text" class="form-control form-control-lg" aria-label=".form-control-lg example" required placeholder="https://www.youtube.com/embed/bqHc1hiNswI?si=1Lv79WhXeG3xl-SU">
+                        <div class="buttons mt-3 d-flex flex-row-reverse">
+                            <button type="button" class="btn btn-danger" onclick="removeVideo('video-${lessonNum}-${videoNum}')">حذف الفيديو</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+        function removeVideo(id) {
+            document.getElementById(id).remove();
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iKt19E6L1fApTxi1zHRSeKGGbPyA/OH2gI1MFn7JqDAngd9i1yJXaXjpF" crossorigin="anonymous"></script>
