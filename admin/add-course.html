@@ -94,50 +94,81 @@
                         </div>
                         <hr>
                          <!-- Lessons Section -->
-                         <div class="mb-4">
-                            <label for="lessons" class="form-label">الدروس</label>
-                            <div id="lessons">
-                                <!-- Lesson Inputs will be dynamically added here -->
-                                <!-- <div class="lesson">
-                                    <div class="card ">
-                                        <div class="card-body">
-                                            <div class="mb-3">
-                                                <label for="courseName" class="form-label">اسم الدرس</label>
-                                                <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
-                                            </div>
-                                            <!- Lesson content Inputs will be dynamically added here ->
-                                            <div id="lessonsContent">
-                                                <div class="card my-4 me-5 light-blue">
-                                                    <div class="card-body">
-                                                        <div class="mb-3">
-                                                            <h4>اسم الفيديو</h4>
-                                                            <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
-                                                            <hr>
-                                                            <h4>لينك الفيديو</h4>
-                                                            <input type="text" class="form-control form-control-lg" id="courseName" aria-label=".form-control-lg example" required placeholder="https://www.youtube.com/embed/bqHc1hiNswI?si=1Lv79WhXeG3xl-SU">
-                                                            <div class="buttons mt-3 d-flex flex-row-reverse">
-                                                                <button type="button" class="btn btn-danger">حذف الفيديو</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex justify-content-between">
-                                                <div class="buttons">
-                                                    <button type="button" class="btn btn-primary ms-3" onclick="addVideo()">أضافة فيديو</button>
-                                                    <button type="button" class="btn btn-primary ms-3" onclick="addExam()">أضافة أمتحان</button>
-                                                    <button type="button" class="btn btn-primary" onclick="addFile()">أضافة ملف</button>
-                                                </div>
-                                                <div class="buttons">
-                                                    <button type="button" class="btn btn-danger">حذف الدرس</button>
-                                                </div>
-                                            </div>
+                         <div class="container-fluid" style="direction: rtl;">
+                            <div class="card shadow">
+                                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                                    <p class="text-primary m-0 fw-bold">محتويات الكورس</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        أضافة حصة
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                                        <table class="table my-0" id="dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th >أسم الكورس</th>
+                                                    <th >عدد الحصص</th>
+                                                    <th >عدد الطلاب</th>
+                                                    <th >السنة</th>
+                                                    <th>التاريخ</th>
+                                                    <th>السعر</th>
+                                                    <th>تعديل</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Airi Satou</td>
+                                                    <td>1</td>
+                                                    <td>400</td>
+                                                    <td>33</td>
+                                                    <td>2008/11/28</td>
+                                                    <td>$162,700</td>
+                                                    <td><a href="#"><button type="button" class="btn btn-primary">تعديل</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Angelica Ramos</td>
+                                                    <td>2</td>
+                                                    <td>400</td>
+                                                    <td>47</td>
+                                                    <td>2009/10/09<br></td>
+                                                    <td>$1,200,000</td>
+                                                    <td><a href="#"><button type="button" class="btn btn-primary">تعديل</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ashton Cox</td>
+                                                    <td>3</td>
+                                                    <td>400</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12<br></td>
+                                                    <td>$86,000</td>
+                                                    <td><a href="#"><button type="button" class="btn btn-primary">تعديل</button></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr></tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 align-self-center">
+                                            <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
                                         </div>
-                                      </div>
-                                </div> -->
+                                        <div class="col-md-6">
+                                            <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                                <ul class="pagination">
+                                                    <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <button type="button" class="btn btn-secondary mt-5" onclick="addLesson()">إضافة درس</button>
                         </div>
 
                         
@@ -185,55 +216,6 @@
                 output.src = reader.result;
             };
             reader.readAsDataURL(event.target.files[0]);
-        }
-        function addLesson() {
-            let lessons = document.getElementById("lessons");
-            let lessonNum = lessons.childElementCount + 1;
-            lessons.innerHTML += `<div class="lesson mt-5">
-                <div class="card ">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <h3>اسم الدرس</h3>
-                            <input type="text" class="form-control form-control-lg" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
-                        </div>
-                        <!-- Lesson content Inputs will be dynamically added here -->
-                        <div id="lessonsContent${lessonNum}">
-                        </div>
-
-                        <div class="d-flex justify-content-between">
-                            <div class="buttons">
-                                <button type="button" class="btn btn-primary ms-3" onclick="addVideo(${lessonNum})">أضافة فيديو</button>
-                                <button type="button" class="btn btn-primary ms-3" onclick="addExam(${lessonNum})">أضافة أمتحان</button>
-                                <button type="button" class="btn btn-primary" onclick="addFile(${lessonNum})">أضافة ملف</button>
-                            </div>
-                            <div class="buttons">
-                                <button type="button" class="btn btn-danger">حذف الدرس</button>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-            </div>`;
-        }
-        function addVideo(lessonNum) {
-            let lessonsContent = document.getElementById("lessonsContent" + lessonNum);
-            let videoNum = lessonsContent.childElementCount + 1;
-            lessonsContent.innerHTML += `<div class="card my-4 me-5 light-blue">
-                <div class="card-body" id='video-${lessonNum}-${videoNum}'>
-                    <div class="mb-3">
-                        <h4>اسم الفيديو</h4>
-                        <input type="text" class="form-control form-control-lg" aria-label=".form-control-lg example" required placeholder="الشهر الاول | كمياء | الصف الثالث الثانوي">
-                        <hr>
-                        <h4>لينك الفيديو</h4>
-                        <input type="text" class="form-control form-control-lg" aria-label=".form-control-lg example" required placeholder="https://www.youtube.com/embed/bqHc1hiNswI?si=1Lv79WhXeG3xl-SU">
-                        <div class="buttons mt-3 d-flex flex-row-reverse">
-                            <button type="button" class="btn btn-danger" onclick="removeVideo('video-${lessonNum}-${videoNum}')">حذف الفيديو</button>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-        }
-        function removeVideo(id) {
-            document.getElementById(id).remove();
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iKt19E6L1fApTxi1zHRSeKGGbPyA/OH2gI1MFn7JqDAngd9i1yJXaXjpF" crossorigin="anonymous"></script>
