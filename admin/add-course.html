@@ -135,28 +135,26 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>الدرس الاول</td>
-                                                    <td>سيكشن</td>
+                                                    <td>فيديو</td>
                                                     <td>2024-4-5</td>
-                                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                        تعديل
-                                                    </button></td>
-                                                    <td><a href="#"><button type="button" class="btn btn-danger">حذف</button></a></td>
+                                                    <td><button type="button" class="btn btn-primary">تعديل</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">حذف</button></td>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
                                                     <td>الدرس الاول</td>
                                                     <td>فيديو</td>
                                                     <td>2024-4-5</td>
-                                                    <td><a href="#"><button type="button" class="btn btn-primary">تعديل</button></a></td>
-                                                    <td><a href="#"><button type="button" class="btn btn-danger">حذف</button></a></td>
+                                                    <td><button type="button" class="btn btn-primary">تعديل</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">حذف</button></td>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
                                                     <td>الدرس الاول</td>
-                                                    <td>سيكشن</td>
+                                                    <td>فيديو</td>
                                                     <td>2024-4-5</td>
-                                                    <td><a href="#"><button type="button" class="btn btn-primary">تعديل</button></a></td>
-                                                    <td><a href="#"><button type="button" class="btn btn-danger">حذف</button></a></td>
+                                                    <td><button type="button" class="btn btn-primary">تعديل</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">حذف</button></td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
@@ -334,6 +332,7 @@
             button2.appendChild(text2);
             button2.classList.add("btn");
             button2.classList.add("btn-danger");
+            button2.setAttribute("onclick", "deleteRow(this)");
             a1.appendChild(button1);
             a2.appendChild(button2);
             td1.appendChild(text4);
@@ -386,6 +385,13 @@
             } catch (error) {
               console.error("Error:", error);
             }
+        }
+        function deleteRow(button) {
+            // Get the parent <tr> element
+            var row = button.closest('tr');
+    
+            // Remove the row from the table
+            row.remove();
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iKt19E6L1fApTxi1zHRSeKGGbPyA/OH2gI1MFn7JqDAngd9i1yJXaXjpF" crossorigin="anonymous"></script>
