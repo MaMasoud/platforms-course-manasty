@@ -117,14 +117,79 @@
                         
 
 
-                        <!-- qustions -->
-                        <h3>الاسئلة</h3>
-                        <div class="mb-3 p-5 bg-primary rounded-3" style="color: #fff;">
-                            <label for="q1" class="form-label">السؤال<span>1</span></label>
-                            <textarea class="form-control" id="q1" rows="5" required placeholder="اكتب السؤال هنا"></textarea>
-
+                         <!-- Lessons Section -->
+                         <div class="container-fluid" style="direction: rtl;">
+                            <div class="card shadow">
+                                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                                    <p class="text-primary m-0 fw-bold">الاسئلة</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        أضافة سؤال
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                                        <table class="table my-0" id="dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th >ID</th>
+                                                    <th >السؤال</th>
+                                                    <th >النوع</th>
+                                                    <th >وقت الانشاء</th>
+                                                    <th>تعديل</th>
+                                                    <th>حذف</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableBody">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>الدرس الاول</td>
+                                                    <td>صح وخطأ</td>
+                                                    <td>2024-4-5</td>
+                                                    <td><button type="button" class="btn btn-primary">تعديل</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">حذف</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>الدرس الاول</td>
+                                                    <td>فيديو</td>
+                                                    <td>2024-4-5</td>
+                                                    <td><button type="button" class="btn btn-primary">تعديل</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">حذف</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>الدرس الاول</td>
+                                                    <td>فيديو</td>
+                                                    <td>2024-4-5</td>
+                                                    <td><button type="button" class="btn btn-primary">تعديل</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">حذف</button></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr></tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 align-self-center">
+                                            <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                                <ul class="pagination">
+                                                    <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                            
                                 
 
                         <!-- Button trigger modal -->
@@ -132,36 +197,37 @@
                         
                         <!-- Modal -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-dialog modal-dialog-centered modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">أضافة محتوي</h1>
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">أضافة سؤال</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin: 0;"></button>
                                 </div>
                                 <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="nameTitle" class="form-label">العنوان</label>
-                                    <input type="text" class="form-control form-control-lg" id="nameTitle" aria-label=".form-control-lg example" required placeholder="أكتب العنوان هنا">
-                                </div>
+                                    <label for="nameTitle" class="form-label">السؤال</label>
+                                    <textarea class="form-control" id="nameTitle" rows="5" required placeholder="اكتب السؤال هنا"></textarea>                                </div>
                                 <div class="mb-3">
                                     <label for="courseDescription" class="form-label">النوع</label>
                                     <select class="form-select" aria-label="Default select example" id="selectionType" onchange="selectShow()">
-                                        <option value="section" selected>قسم</option>
-                                        <option value="video">فيديو</option>
-                                        <option value="exam">أمتحان</option>
-                                        <option value="file">ملف</option>
+                                        <option value="trueFalse" selected>صح وخطأ</option>
+                                        <option value="choose">أختار</option>
+                                        <option value="textarea">مقالي</option>
                                     </select>
                                 </div>
-                                <div class="mb-3" id="linkVideo" style="display: none;">
-                                    <label for="iframeLink" class="form-label">أضف اللينك</label>
-                                    <input type="text" class="form-control form-control-lg" id="iframeLink" aria-label=".form-control-lg example" required placeholder="أكتب اللينك هنا">
-                                </div>
-                                <div class="mb-3" id="exam-drob" style="display: none;">
+                                <div class="mb-3" id="trueAndFalse" style="display:none;">
+                                    <label for="courseDescription" class="form-label">الاجابة</label>
                                     <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected>exam1</option>
-                                        <option value="2">exam2</option>
-                                        <option value="3">exam3</option>
+                                        <option value="true" selected>صح</option>
+                                        <option value="false">خطأ</option>
                                     </select>
+                                </div>
+                                <div class="mb-3" id="chooseAnswer" style="">
+                                    <div class="mb-3">
+                                        <label for="courseDescription" class="form-label">الاجابة الاولى</label>
+                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة الاولى">
+                                    </div>
+
                                 </div>
                                 </div>
                                 <div class="modal-footer">
