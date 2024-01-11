@@ -206,7 +206,7 @@
                                 <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="nameTitle" class="form-label">السؤال</label>
-                                    <textarea class="form-control" id="nameTitle" rows="5" required placeholder="اكتب السؤال هنا"></textarea>                                </div>
+                                    <textarea class="form-control" autocomplete="off" id="nameTitle" rows="5" required placeholder="اكتب السؤال هنا"></textarea>                                </div>
                                 <div class="mb-3">
                                     <label for="courseDescription" class="form-label">النوع</label>
                                     <select class="form-select" aria-label="Default select example" id="selectionType" onchange="selectShow()">
@@ -222,11 +222,21 @@
                                         <option value="false">خطأ</option>
                                     </select>
                                 </div>
-                                <div class="mb-3" id="chooseAnswer" style="">
-                                    <div class="mb-3">
-                                        <label for="courseDescription" class="form-label">الاجابة الاولى</label>
-                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة الاولى">
+                                <div class="mb-3 bg-primary-subtle p-4 rounded-3" id="chooseAnswer" style="">
+                                    <h5>الاجابات</h5>
+                                    <div class="my-3 d-flex align-items-center gap-3">
+                                        <label for="courseDescription" class="form-label">1-</label>
+                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة هنا" autocomplete="off">
+                                        <input type="radio" class=" ">
                                     </div>
+                                    <div class="my-3 d-flex align-items-center gap-3">
+                                        <label for="courseDescription" class="form-label">2-</label>
+                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة هنا" autocomplete="off">
+                                        <input type="radio" class=" ">
+                                    </div>
+                                    <!--  add button to add more answers -->
+                                    <button type="button" class="btn btn-primary" id="addAnswer()">أضافة اجابة</button>
+                                    
 
                                 </div>
                                 </div>
