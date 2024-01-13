@@ -202,11 +202,11 @@
                                 <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">أضافة سؤال</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin: 0;"></button>
-                                </div>
+                            </div>
                                 <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="nameTitle" class="form-label">السؤال</label>
-                                    <textarea class="form-control" id="nameTitle" rows="5" required placeholder="اكتب السؤال هنا"></textarea>                                </div>
+                                    <textarea class="form-control" autocomplete="off" id="nameTitle" rows="5" required placeholder="اكتب السؤال هنا"></textarea>                                </div>
                                 <div class="mb-3">
                                     <label for="courseDescription" class="form-label">النوع</label>
                                     <select class="form-select" aria-label="Default select example" id="selectionType" onchange="selectShow()">
@@ -222,11 +222,23 @@
                                         <option value="false">خطأ</option>
                                     </select>
                                 </div>
-                                <div class="mb-3" id="chooseAnswer" style="">
-                                    <div class="mb-3">
-                                        <label for="courseDescription" class="form-label">الاجابة الاولى</label>
-                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة الاولى">
+                                <div class="mb-3 bg-primary-subtle p-4 rounded-3" id="chooseAnswer" style="">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>الاجابات</h5>
+                                        <button type="button" class="btn btn-primary" onclick="addAnswer()" id="add-answer">أضافة اجابة</button>
                                     </div>
+                                    <div class="my-3 d-flex align-items-center gap-3">
+                                        <label for="courseDescription" class="form-label">1-</label>
+                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة هنا" autocomplete="off">
+                                        <input type="radio" name="answer">
+                                    </div>
+                                    <div class="my-3 d-flex align-items-center gap-3">
+                                        <label for="courseDescription" class="form-label">2-</label>
+                                        <input type="text" class="form-control" id="courseDescription" rows="3" required placeholder="اكتب الاجابة هنا" autocomplete="off">
+                                        <input type="radio" name="answer">
+                                    </div>
+                                    <!--  add button to add more answers -->
+                                    
 
                                 </div>
                                 </div>
@@ -402,6 +414,28 @@
     
             // Remove the row from the table
             row.remove();
+        }
+        function addAnswer() {
+            let chooseAnswer = document.getElementById("chooseAnswer");
+            let div = document.createElement("div");
+            let label = document.createElement("label");
+            let input = document.createElement("input");
+            let inputRadio = document.createElement("input");
+            let numAnsers = chooseAnswer.childElementCount;
+            let text = document.createTextNode(numAnsers + "-");
+            inputRadio.setAttribute("type", "radio");
+            inputRadio.setAttribute("name", "answer");
+            input.setAttribute("type", "text");
+            input.setAttribute("class", "form-control");
+            input.setAttribute("placeholder", "اكتب الاجابة هنا");
+            label.setAttribute("for", "courseDescription");
+            label.setAttribute("class", "form-label");
+            div.setAttribute("class", "my-3 d-flex align-items-center gap-3");
+            label.appendChild(text);
+            div.appendChild(label);
+            div.appendChild(input);
+            div.appendChild(inputRadio);
+            chooseAnswer.appendChild(div);
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iKt19E6L1fApTxi1zHRSeKGGbPyA/OH2gI1MFn7JqDAngd9i1yJXaXjpF" crossorigin="anonymous"></script>
