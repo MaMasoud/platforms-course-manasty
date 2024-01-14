@@ -117,42 +117,39 @@ header nav .header-info .user-info .notification h5 {
 main {
     display: flex;
 }
-main .sidebar {
+.sidebar {
     position: absolute;
     z-index: 999;
     bottom: 0;
     right: 0;
-    width: 100vh;
+    width: 100%;
     border-left: 1px solid var(--neutral-7, #C6D0E0);
-    background: var(--neutral-9, #EEF4FA);
+    background: var(--blue-6, #D4E7FF);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
 }
-main .sidebar .top {
+.sidebar .top {
     display: flex;
 }
-main .sidebar .sidebar-item {
+.sidebar .sidebar-item {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding: 15px 50px;
-    font-size: 16px;
+    flex-direction: column;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-main .sidebar .sidebar-item img {
+.sidebar .sidebar-item img {
     width: 24px;
     height: 24px;
 }
-main .sidebar .sidebar-item h5 {
+.sidebar .sidebar-item h5 {
     color: var(--neutral-3, #262F44);
     font-weight: 500;
 }
 main .sidebar .sidebar-item:hover {
     background: var(--neutral-8, #F2F4F8);
-}
-main .sidebar .sidebar-item.selected {
-    background: var(--neutral-10, #F2F4F8);
 }
 main .content {
     width: calc(100% - 300px);
