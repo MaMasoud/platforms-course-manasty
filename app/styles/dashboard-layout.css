@@ -116,6 +116,7 @@ header nav .header-info .user-info .notification h5 {
 }
 main {
     display: flex;
+    min-height: 100vh;
 }
 .sidebar {
     position: fixed;
