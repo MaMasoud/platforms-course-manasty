@@ -19,7 +19,7 @@ function showNotification() {
         notification.style.left = "-300px";
     }, 3000);
 }
-setTimeout(showNotification, 1000);
+// setTimeout(showNotification, 1000);
 
 
 function handleInput(index, event) {
