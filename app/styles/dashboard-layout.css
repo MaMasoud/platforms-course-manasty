@@ -156,6 +156,7 @@ main {
 .sidebar .sidebar-item h5 {
     color: var(--neutral-3, #262F44);
     font-weight: 500;
+    font-size: 12px;
 }
 main .sidebar .sidebar-item:hover {
     background: var(--neutral-8, #F2F4F8);

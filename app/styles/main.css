@@ -132,14 +132,14 @@ header nav h3 {
     width: fit-content;
 }
 .main-lable .circle {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: var(--sec-2, #F4CB3C);
 }
 .main-lable h3 {
     color: #FFF;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     padding: 0 15px;
 }
