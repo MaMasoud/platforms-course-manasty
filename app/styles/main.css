@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --neutral-3: #262F44;
-    
+    --Neutral-5: #58647C;
     --neutral-7: #C6D0E0;
     --neutral-8: #E0E6EE;
     --neutral-9: #EEF4FA;
     --neutral-10: #F6F8FC;
 
     --blue-3: #2E6FF4;
+    --blue-4: #89BAF8;
 
     --sec-1: #E0B51D;
     --sec-2: #F4CB3C;

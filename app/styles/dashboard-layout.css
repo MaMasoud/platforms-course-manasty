@@ -141,9 +141,17 @@ main {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.sidebar .sidebar-item img {
+.sidebar .sidebar-item svg {
     width: 24px;
     height: 24px;
+}
+.sidebar .sidebar-item.selected svg {
+    background: var(--neutral-5, #58647C);
+    padding: 5px;
+    border-radius: 50%;
+}
+.sidebar .sidebar-item.selected svg path {
+    fill: #fff;
 }
 .sidebar .sidebar-item h5 {
     color: var(--neutral-3, #262F44);
