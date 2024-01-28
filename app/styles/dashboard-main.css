@@ -8,8 +8,16 @@
 .courses {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* width: fit-content; */
+    /* overflow-x: scroll; */
+    gap: 20px;
+    /* scroll-snap-type: x mandatory; */
+    /* -ms-overflow-style: none; */
+    /* overflow: -moz-scrollbars-none; */
 }
 .courses .course {
     overflow: hidden;
@@ -19,6 +27,9 @@
     background: #FFF;
     box-shadow: 0px 5px 10px 0px rgba(17, 36, 123, 0.30);
     transition: 0.3s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 .courses .course:hover {
     transform: translateY(-10px);
