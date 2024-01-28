@@ -3,7 +3,7 @@ header nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 30px;
+    /* padding: 0 30px; */
 }
 header nav .back-button a{
     display: flex;
