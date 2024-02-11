@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/dashboard-layout.css">
+    <link rel="stylesheet" href="./styles/dashboard-main.css">
+</head>
+<body dir="rtl">
+    <div style="position: absolute; width: 100%; height: 100%; pointer-events: none;"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h3>منصتي</h3>
+                <img style="width: 40px; height: 40px" src="../asseds/images/logo.png" />
+            </div>
+            <div class="header-info">
+                <div class="account">
+                    <div class="photo">
+                        <img src="../asseds/images/avatar.jpg" />
+                    </div>
+                    <div class="username">
+                        <h5 class="welcome">مساء الخير</h5>
+                        <h5 class="name">محمد هاني احمد</h5>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <button class="wallet" onclick="showWallet()">
+                        <img src="../asseds/icons/solar_wallet-linear.svg" />
+                        <h5>120 جنيه</h5>
+                    </button>
+                    <div class="wallet-info" id="wallet-info-id">
+                        <h3>إضافة كود جديد</h3>
+                        <div class="add-code">
+                            <div class="codes">
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(1, event)" onpaste="handlePaste(1, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(2, event)" onpaste="handlePaste(2, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(3, event)" onpaste="handlePaste(3, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(4, event)" onpaste="handlePaste(4, event)" />
+                                <!-- <div class="dash"></div> -->
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(5, event)" onpaste="handlePaste(5, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(6, event)" onpaste="handlePaste(6, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(7, event)" onpaste="handlePaste(7, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(8, event)" onpaste="handlePaste(8, event)" />
+                                <!-- <div class="dash"></div> -->
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(9, event)" onpaste="handlePaste(9, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(10, event)" onpaste="handlePaste(10, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(11, event)" onpaste="handlePaste(11, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(12, event)" onpaste="handlePaste(12, event)" />
+                            </div>
+                            <button class="paste-code" onclick="pasteText()">
+                                <img src="/asseds/icons/iconoir_paste-clipboard.svg" alt="">
+                                <span>
+                                    لصق الكود
+                                </span>
+                            </button>
+                        </div>
+                        <button class="check">تحقق من الكود</button>
+                    </div>
+                    <a class="notification" href="notification.html">
+                        <img src="../asseds/icons/ph_bell-bold.svg" />
+                        <h5>5</h5>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="sidebar">
+            <div class="top">
+                <a class="sidebar-item selected" href="#">
+                    <img src="../asseds/icons/iconamoon_home.svg" />
+                    <h5>الرئيسية</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-mycourses.html">
+                    <img src="../asseds/icons/lets-icons_video.svg" />
+                    <h5>كورساتي</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-qbank.html">
+                    <img src="../asseds/icons/mingcute_question-line.svg" />
+                    <h5>بنك الاسئلة</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-allcourses.html">
+                    <img src="../asseds/icons/carbon_course.svg" />
+                    <h5>كل الكورسات</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-reviews.html">
+                    <img src="../asseds/icons/mingcute_fast-rewind-line.svg" />
+                    <h5>المراجعات</h5>
+                </a>
+            </div>
+            <div class="bottom">
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/bx_support.svg" />
+                    <h5>مساعدة</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/iconoir_privacy-policy.svg" />
+                    <h5>سياسة الخصوصية</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/carbon_settings.svg" />
+                    <h5>الاعدادات</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/ci_exit.svg" />
+                    <h5>خروج</h5>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <button id="openModalBtn">Checkout</button>
+            
+            
+            <div class="notification-card" id="notification-card-show">
+                <a href="./notification.html">
+                    <img src="/asseds/icons/iconamoon_notification-fill.svg" alt="">
+                    <p>عندك رسائل جديدة</p>
+                    <audio id="notificationSound" src="/asseds/sounds/notifications-sound.mp3"></audio>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="m-h">
+                <h2>شراء الكورس</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+
+
+            <p>Please confirm your purchase.</p>
+            <div class="buttons">
+                <a href="#" class="buy" id="confirmPurchaseBtn">شراء الكورس</a>
+                <button class="close close-button">أغلاق</button>
+            </div>
+        </div>
+      </div>
+    <script src="./javascript/dashboard.js"></script>          
+</body>
+</html>

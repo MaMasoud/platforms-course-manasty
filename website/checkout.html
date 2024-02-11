@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/dashboard-layout.css">
+    <link rel="stylesheet" href="./styles/code-no-enroll.css">
+</head>
+<body dir="rtl">
+    <header>
+        <nav>
+            <div class="logo">
+                <h3>منصتي</h3>
+                <img style="width: 40px; height: 40px" src="../asseds/images/logo.png" />
+            </div>
+            <div class="header-info">
+                <div class="account">
+                    <div class="photo">
+                        <img src="../asseds/images/avatar.jpg" />
+                    </div>
+                    <div class="username">
+                        <h5 class="welcome">مساء الخير</h5>
+                        <h5 class="name">محمد هاني احمد</h5>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <button class="wallet" onclick="showWallet()">
+                        <img src="../asseds/icons/solar_wallet-linear.svg" />
+                        <h5>120 جنيه</h5>
+                    </button>
+                    <div class="wallet-info" id="wallet-info-id">
+                        <h3>إضافة كود جديد</h3>
+                        <div class="add-code">
+                            <div class="codes">
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(1, event)" onpaste="handlePaste(1, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(2, event)" onpaste="handlePaste(2, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(3, event)" onpaste="handlePaste(3, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(4, event)" onpaste="handlePaste(4, event)" />
+                                <!-- <div class="dash"></div> -->
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(5, event)" onpaste="handlePaste(5, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(6, event)" onpaste="handlePaste(6, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(7, event)" onpaste="handlePaste(7, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(8, event)" onpaste="handlePaste(8, event)" />
+                                <!-- <div class="dash"></div> -->
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(9, event)" onpaste="handlePaste(9, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(10, event)" onpaste="handlePaste(10, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(11, event)" onpaste="handlePaste(11, event)" />
+                                <input type="text" class="otp-input" maxlength="1" oninput="handleInput(12, event)" onpaste="handlePaste(12, event)" />
+                            </div>
+                            <button class="paste-code" onclick="pasteText()">
+                                <img src="/asseds/icons/iconoir_paste-clipboard.svg" alt="">
+                                <span>
+                                    لصق الكود
+                                </span>
+                            </button>
+                        </div>
+                        <button class="check">تحقق من الكود</button>
+                    </div>
+                    <a class="notification" href="notification.html">
+                        <img src="../asseds/icons/ph_bell-bold.svg" />
+                        <h5>5</h5>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="sidebar">
+            <div class="top">
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/iconamoon_home.svg" />
+                    <h5>الرئيسية</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-mycourses.html">
+                    <img src="../asseds/icons/lets-icons_video.svg" />
+                    <h5>كورساتي</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-qbank.html">
+                    <img src="../asseds/icons/mingcute_question-line.svg" />
+                    <h5>بنك الاسئلة</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-allcourses.html">
+                    <img src="../asseds/icons/carbon_course.svg" />
+                    <h5>كل الكورسات</h5>
+                </a>
+                <a class="sidebar-item" href="./dashboard-reviews.html">
+                    <img src="../asseds/icons/mingcute_fast-rewind-line.svg" />
+                    <h5>المراجعات</h5>
+                </a>
+            </div>
+            <div class="bottom">
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/bx_support.svg" />
+                    <h5>مساعدة</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/iconoir_privacy-policy.svg" />
+                    <h5>سياسة الخصوصية</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/carbon_settings.svg" />
+                    <h5>الاعدادات</h5>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <img src="../asseds/icons/ci_exit.svg" />
+                    <h5>خروج</h5>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main-cover">
+                <img src="/asseds/images/teacher.png" alt="">
+            </div>
+            <div class="main-info">
+                <h1>الشهر الاول كمياء مع د/ عمر السيد</h1>
+                <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الف
+                </p>
+            </div>
+            <div class="main-lable">
+                <div class="circle"></div>
+                <h3>محتويات الكورس</h3>
+            </div>
+            
+
+
+
+            
+
+            <ul class="accordion-menu">
+
+
+                
+                <li class="link">
+                    <div class="dropdown">
+                        <h3>س: كيف يمكنني التسجيل في منصتكم؟</h3>
+                        <img src="/asseds/icons/ep_arrow-up-bold.svg" class="arrow" alt="">
+                    </div>
+                    <ul class="submenuItems">
+
+                        <li>
+                            <a href="#">
+                                <div class="info">
+                                    <img src="/asseds/icons/tabler_video.svg" alt="">
+                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
+                                </div>
+                                <h5>مجاني</h5>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div class="closed-lesson">
+                                <div class="info">
+                                    <img src="/asseds/icons/quill_paper.svg" alt="">
+                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
+                                </div>
+                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="closed-lesson">
+                                <div class="info">
+                                    <img src="/asseds/icons/material-symbols_download.svg" alt="">
+                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
+                                </div>
+                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+
+
+                <li class="link">
+                    <div class="dropdown">
+                        <h3>س: كيف يمكنني التسجيل في منصتكم؟</h3>
+                        <img src="/asseds/icons/ep_arrow-up-bold.svg" class="arrow" alt="">
+                    </div>
+                    <ul class="submenuItems">
+
+                        <li>
+                            <a href="#">
+                                <div class="info">
+                                    <img src="/asseds/icons/tabler_video.svg" alt="">
+                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
+                                </div>
+                                <h5>مجاني</h5>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div class="closed-lesson">
+                                <div class="info">
+                                    <img src="/asseds/icons/tabler_video.svg" alt="">
+                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
+                                </div>
+                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="closed-lesson">
+                                <div class="info">
+                                    <img src="/asseds/icons/tabler_video.svg" alt="">
+                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
+                                </div>
+                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+ 
+                 
+
+            <div class="buy-course">
+                <a href="#">اشتري الكورس دلوقتي</a>
+                <button id="openModalBtn">Checkout</button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+
+    
+
+    <script src="./javascript/dashboard.js"></script>  
+</body>
+</html>
