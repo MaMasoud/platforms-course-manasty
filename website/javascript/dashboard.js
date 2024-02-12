@@ -1,13 +1,31 @@
-function showWallet() {
+// function showWallet() {
 
+//     let walletInfo = document.getElementById("wallet-info-id");
+//     if (walletInfo.style.display == "none" || walletInfo.style.display === "") {
+//         walletInfo.style.display = "flex";
+//     } else {
+//         walletInfo.style.display = "none";
+//     }
+// }
+function showWallet() {
     let walletInfo = document.getElementById("wallet-info-id");
     if (walletInfo.style.display == "none" || walletInfo.style.display === "") {
         walletInfo.style.display = "flex";
+        // Add event listener to handle clicks outside of the wallet
+        document.addEventListener('click', handleOutsideClick);
     } else {
         walletInfo.style.display = "none";
     }
 }
 
+function handleOutsideClick(event) {
+    let walletInfo = document.getElementById("wallet-info-id");
+    let walletButton = document.querySelector('.wallet');
+    if (!walletInfo.contains(event.target) && event.target !== walletButton) {
+        walletInfo.style.display = "none";
+        document.removeEventListener('click', handleOutsideClick);
+    }
+}
 
 
 function showNotification() {
