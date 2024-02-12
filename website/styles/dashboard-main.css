@@ -1,9 +1,45 @@
+main .content {
+    padding: 0;
+}
 
 
+.dashboard-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dashboard-bg img {
+    width: 100%;
+    position: relative;
+}
+.dashboard-bg .dashboard-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.dashboard-bg .dashboard-info img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--blue-4, #89BAF8);
+}
+.dashboard-bg .dashboard-info .info h3{
+    font-size: 32px;
+    color: var(--neutral-10);
+    font-weight: 500;
+}
+.dashboard-bg .dashboard-info .info p{
+    color: var(--neutral-8, #E0E6EE);
+    font-size: 15px;
+    font-weight: 500;
+}
 
 
 .complete-your-courses {
-    padding: 50px 0px;
+    padding: 50px 30px;
 }
 .courses {
     margin-top: 50px;
