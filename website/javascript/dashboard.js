@@ -124,9 +124,11 @@ document.addEventListener('contextmenu', function (e) {
 
 // Get the modal
 var modal = document.getElementById('modal');
+var modal2 = document.getElementById('modal2');
 
 // Get the button that opens the modal
 var openModalBtn = document.getElementById("openModalBtn");
+var openModal2Btn = document.getElementById("openModal2Btn");
 
 // Get the <span> element that closes the modal
 var closeBtn = document.getElementsByClassName("close")[0];
@@ -136,6 +138,9 @@ var closeBtn2 = document.getElementsByClassName("close")[1];
 openModalBtn.onclick = function() {
   modal.style.display = "block";
 }
+openModal2Btn.onclick = function() {
+    modal2.style.display = "block";
+  }
 
 // When the user clicks on <span> (x), close the modal
 closeBtn.onclick = function() {
@@ -149,5 +154,8 @@ closeBtn2.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+  else if (event.target == modal2) {
+    modal2.style.display = "none"
   }
 }

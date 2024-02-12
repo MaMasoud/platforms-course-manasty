@@ -6,7 +6,7 @@
     <title>الرئيسية</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/dashboard-layout.css">
-    <link rel="stylesheet" href="./styles/code-no-enroll.css">
+    <link rel="stylesheet" href="./styles/checkout.css">
 </head>
 <body dir="rtl">
     <header>
@@ -120,127 +120,41 @@
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الف
                 </p>
             </div>
-            <div class="main-lable">
-                <div class="circle"></div>
-                <h3>محتويات الكورس</h3>
-            </div>
             
-
-
-
-            
-
-            <ul class="accordion-menu">
-
-
-                
-                <li class="link">
-                    <div class="dropdown">
-                        <h3>س: كيف يمكنني التسجيل في منصتكم؟</h3>
-                        <img src="/asseds/icons/ep_arrow-up-bold.svg" class="arrow" alt="">
-                    </div>
-                    <ul class="submenuItems">
-
-                        <li>
-                            <a href="#">
-                                <div class="info">
-                                    <img src="/asseds/icons/tabler_video.svg" alt="">
-                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
-                                </div>
-                                <h5>مجاني</h5>
-                            </a>
-                        </li>
-
-                        <li>
-                            <div class="closed-lesson">
-                                <div class="info">
-                                    <img src="/asseds/icons/quill_paper.svg" alt="">
-                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
-                                </div>
-                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="closed-lesson">
-                                <div class="info">
-                                    <img src="/asseds/icons/material-symbols_download.svg" alt="">
-                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
-                                </div>
-                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                
-
-
-                <li class="link">
-                    <div class="dropdown">
-                        <h3>س: كيف يمكنني التسجيل في منصتكم؟</h3>
-                        <img src="/asseds/icons/ep_arrow-up-bold.svg" class="arrow" alt="">
-                    </div>
-                    <ul class="submenuItems">
-
-                        <li>
-                            <a href="#">
-                                <div class="info">
-                                    <img src="/asseds/icons/tabler_video.svg" alt="">
-                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
-                                </div>
-                                <h5>مجاني</h5>
-                            </a>
-                        </li>
-
-                        <li>
-                            <div class="closed-lesson">
-                                <div class="info">
-                                    <img src="/asseds/icons/tabler_video.svg" alt="">
-                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
-                                </div>
-                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="closed-lesson">
-                                <div class="info">
-                                    <img src="/asseds/icons/tabler_video.svg" alt="">
-                                    يحتوي علي شرح الشهر الاول في الصف الاول الثانوي
-                                </div>
-                                <img src="/asseds/icons/system-uicons_lock.svg" alt="">
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </li>
-                
-            </ul>
- 
-                 
-
             <div class="buy-course">
-                <a href="#">اشتري الكورس دلوقتي</a>
-                <button id="openModalBtn">Checkout</button>
+                <button id="openModalBtn">شراء من خلال المحفظة</button>
+                <button id="openModalBtn">شراء من خلال كود</button>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </main>
 
 
-    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="m-h">
+                <h2>شراء الكورس</h2>
+                <span class="close">&times;</span>
+            </div>
+            <p>هل انت متاكد من اتمام عملية الشراء</p>
+            <div class="buttons">
+                <a href="#" class="buy" id="confirmPurchaseBtn">شراء الكورس</a>
+                <button class="close close-button">أغلاق</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="m-h">
+                <h2>شراء الكورس</h2>
+                <span class="close">&times;</span>
+            </div>
+            <p>تمت عملية الشراء بنجاح</p>
+            <div class="buttons">
+                <a href="#" class="buy" id="confirmPurchaseBtn">شراء الكورس</a>
+                <button class="close close-button">أغلاق</button>
+            </div>
+        </div>
+    </div>
 
     <script src="./javascript/dashboard.js"></script>  
 </body>
