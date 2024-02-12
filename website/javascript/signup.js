@@ -27,93 +27,93 @@ function erorrScreen(id) {
 function validate(username, password1, password2, email) 
 {
     if (username == ""){
-        message("Please enter a username");
-        erorrScreen("username");
+        message("الرجاء إدخال اسم مستخدم");
+        erorrScreen("اسم المستخدم");
         return;
     }
     if (email == ""){
-        message("Please enter an email");
-        erorrScreen("email");
+        message("الرجاء إدخال بريد إلكتروني");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (password1 == ""){
-        message("Please enter a password");
-        erorrScreen("password1");
+        message("الرجاء إدخال كلمة مرور");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (password2 == ""){
-        message("Please confirm your password");
-        erorrScreen("password2");
+        message("الرجاء تأكيد كلمة المرور");
+        erorrScreen("تأكيد كلمة المرور");
         return;
     }
     if (password1 != password2){
-        message("Passwords do not match");
-        erorrScreen("password1");
+        message("كلمات المرور غير متطابقة");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (password1.length < 8){
-        message("Password must be at least 8 characters long");
-        erorrScreen("password1");
+        message("يجب أن تكون كلمة المرور على الأقل ٨ أحرف");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (password1.length > 20){
-        message("Password must be less than 20 characters long");
-        erorrScreen("password1");
+        message("يجب أن تكون كلمة المرور أقل من ٢٠ حرفًا");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (username.length > 50){
-        message("Username must be less than 50 characters long");
-        erorrScreen("username");
+        message("يجب أن يكون اسم المستخدم أقل من ٥٠ حرفًا");
+        erorrScreen("اسم المستخدم");
         return;
     }
     if (username == email){
-        message("Username and email cannot be the same");
-        erorrScreen("email");
+        message("لا يمكن أن يكون اسم المستخدم والبريد الإلكتروني متطابقين");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.length > 50){
-        message("Email must be less than 50 characters long");
-        erorrScreen("email");
+        message("يجب أن يكون البريد الإلكتروني أقل من ٥٠ حرفًا");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") == -1){
-        message("Email must contain an @");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على @");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") == -1){
-        message("Email must contain a .");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على .");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") == 0){
-        message("Email must contain a username");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على اسم مستخدم");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") == 0){
-        message("Email must contain a domain");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على نطاق");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") == email.length - 1){
-        message("Email must contain a domain");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على نطاق");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") == email.length - 1){
-        message("Email must contain a domain");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على نطاق");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") != email.lastIndexOf("@")){
-        message("Email must contain only one @");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على @ واحد فقط");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") != email.lastIndexOf(".")){
-        message("Email must contain only one .");
-        erorrScreen("email");
+        message("يجب أن يحتوي البريد الإلكتروني على . واحد فقط");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     return true;
