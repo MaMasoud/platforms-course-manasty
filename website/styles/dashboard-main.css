@@ -7,18 +7,29 @@ main .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    height: 400px;
+    border-radius: 0 0 30% 30% ; 
+    background: linear-gradient(45deg, var(--blue-3, #2E6FF4), #a138f1 ,#6617ed);
+    background-size: 300% 300%;
+    animation: gradient 10s ease-in-out infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.dashboard-bg img {
-    width: 100%;
-    position: relative;
-}
 .dashboard-bg .dashboard-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
     text-align: center;
 }
 .dashboard-bg .dashboard-info img {
