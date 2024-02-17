@@ -274,27 +274,20 @@
         }
         function selectShow() {
             let select = document.getElementById("selectionType");
-            select.addEventListener("change", function () { // Add missing parenthesis and brace
-                let selectedOption = select.options[select.selectedIndex];
-                let selectedValue = selectedOption.value;
-                let linkVideo = document.getElementById("linkVideo");
-                let examDrob = document.getElementById("exam-drob");
-                if (selectedValue == "video") {
-                    linkVideo.style.display = "block";
-                    examDrob.style.display = "none";
-                } else if (selectedValue == "exam"){
-                    linkVideo.style.display = "none";
-                    examDrob.style.display = "block";
-
-                } else if (selectedValue == "file"){
-                    linkVideo.style.display = "block";
-                    examDrob.style.display = "none";
-
-                } else if (selectedValue == "section"){
-                    linkVideo.style.display = "none";
-                    examDrob.style.display = "none";
-                }
-            }); // Add missing parenthesis and brace
+            let selectedValue = select.value; // Get the initial selected value
+            let linkVideo = document.getElementById("linkVideo");
+            let examDrob = document.getElementById("exam-drob");
+        
+            if (selectedValue === "video") {
+                linkVideo.style.display = "block";
+                examDrob.style.display = "none";
+            } else if (selectedValue === "exam") {
+                linkVideo.style.display = "none";
+                examDrob.style.display = "block";
+            } else {
+                linkVideo.style.display = "none";
+                examDrob.style.display = "none";
+            }
         }
         function saveNew() {
             let select = document.getElementById("selectionType");
@@ -393,6 +386,9 @@
             // Remove the row from the table
             row.remove();
         }
+        $('#staticBackdrop').on('shown.bs.modal', function () {
+            selectShow(); // Call selectShow() when the modal is shown
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iKt19E6L1fApTxi1zHRSeKGGbPyA/OH2gI1MFn7JqDAngd9i1yJXaXjpF" crossorigin="anonymous"></script>
 
