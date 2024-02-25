@@ -19,78 +19,101 @@ function sendTwoSecScreen(screen){
     }
 }
 
+function erorrScreen(id) {
+    document.getElementById(id).focus();
+        document.getElementById(id).style.border = "2px solid #E62836";
+}
+
 function validate(username, password1, password2, email) 
 {
     if (username == ""){
-        alert("Please enter a username");
+        message("الرجاء إدخال اسم مستخدم");
+        erorrScreen("اسم المستخدم");
         return;
     }
     if (email == ""){
-        alert("Please enter an email");
+        message("الرجاء إدخال بريد إلكتروني");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (password1 == ""){
-        alert("Please enter a password");
+        message("الرجاء إدخال كلمة مرور");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (password2 == ""){
-        alert("Please confirm your password");
+        message("الرجاء تأكيد كلمة المرور");
+        erorrScreen("تأكيد كلمة المرور");
         return;
     }
     if (password1 != password2){
-        alert("Passwords do not match");
+        message("كلمات المرور غير متطابقة");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (password1.length < 8){
-        alert("Password must be at least 8 characters long");
+        message("يجب أن تكون كلمة المرور على الأقل ٨ أحرف");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (password1.length > 20){
-        alert("Password must be less than 20 characters long");
+        message("يجب أن تكون كلمة المرور أقل من ٢٠ حرفًا");
+        erorrScreen("كلمة المرور");
         return;
     }
     if (username.length > 50){
-        alert("Username must be less than 50 characters long");
+        message("يجب أن يكون اسم المستخدم أقل من ٥٠ حرفًا");
+        erorrScreen("اسم المستخدم");
         return;
     }
     if (username == email){
-        alert("Username and email cannot be the same");
+        message("لا يمكن أن يكون اسم المستخدم والبريد الإلكتروني متطابقين");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.length > 50){
-        alert("Email must be less than 50 characters long");
+        message("يجب أن يكون البريد الإلكتروني أقل من ٥٠ حرفًا");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") == -1){
-        alert("Email must contain an @");
+        message("يجب أن يحتوي البريد الإلكتروني على @");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") == -1){
-        alert("Email must contain a .");
+        message("يجب أن يحتوي البريد الإلكتروني على .");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") == 0){
-        alert("Email must contain a username");
+        message("يجب أن يحتوي البريد الإلكتروني على اسم مستخدم");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") == 0){
-        alert("Email must contain a domain");
+        message("يجب أن يحتوي البريد الإلكتروني على نطاق");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") == email.length - 1){
-        alert("Email must contain a domain");
+        message("يجب أن يحتوي البريد الإلكتروني على نطاق");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") == email.length - 1){
-        alert("Email must contain a domain");
+        message("يجب أن يحتوي البريد الإلكتروني على نطاق");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf("@") != email.lastIndexOf("@")){
-        alert("Email must contain only one @");
+        message("يجب أن يحتوي البريد الإلكتروني على @ واحد فقط");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     if (email.indexOf(".") != email.lastIndexOf(".")){
-        alert("Email must contain only one .");
+        message("يجب أن يحتوي البريد الإلكتروني على . واحد فقط");
+        erorrScreen("البريد الإلكتروني");
         return;
     }
     return true;
@@ -126,4 +149,10 @@ function selectTaqasous(button, taqasous) {
 
     // Add 'selected' class to the clicked button
     button.classList.add('taqasous-button-selected');
+}
+
+function message(message){
+    document.getElementById("message").innerHTML = message;
+    document.getElementById("message").style.display = "block";
+    setTimeout(function(){ document.getElementById("message").style.display = "none"; }, 5000);
 }

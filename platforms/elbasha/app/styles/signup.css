@@ -1,5 +1,5 @@
 body {
-    background: var(--neutral-9, #EEF4FA);
+    background: var(--neutral-1);
     min-height: 100vh;
 }
 .overlay {
@@ -11,6 +11,16 @@ body {
     background: url(../../asseds/images/shapes.png);
     background-repeat: repeat;
     opacity: 0.1;
+}
+#message {
+    background-color: var(--Error-3, #E62836);
+    color: var(--neutral-9, #EEF4FA);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: none;
 }
 .login-section {
     display: flex;
@@ -24,14 +34,14 @@ body {
     width: 100%;
     max-width: 600px;
     border-radius: 25px;
-    background: var(--neutral-9, #EEF4FA);
+    background: var(--neutral-1);
     padding: 20px 24px;
     text-align: center;
 }
 .login-section .login-container h2 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--neutral-3, #262F44);
+    color: #fff;
     margin-bottom: 30px;
 }
 .login-section .login-container .content {
@@ -81,10 +91,10 @@ body {
     border-radius: 5px;
 }
 .login-section .login-container .content .line span {
-    color: var(--neutral-3, #262F44);
+    color: var(--neutral-10, #262F44);
     font-size: 16px;
     font-weight: 500;
-    background: var(--neutral-9, #EEF4FA);
+    background: var(--neutral-1);
     padding: 0 10px;
     position: relative;
 }
@@ -97,7 +107,7 @@ body {
 .form-login input[type='text'],
 .form-login input[type='email'],
 .form-login input[type='password'] {
-    color: var(--neutral-5, #58647C);
+    color: var(--neutral-7, #58647C);
     font-size: 15px;
     padding: 15px 20px;
     font-weight: 500;
@@ -111,17 +121,18 @@ body {
 .form-login input[type='text']:focus,
 .form-login input[type='email']:focus,
 .form-login input[type='password']:focus {
-    color: var(--neutral-1, #050B19);
+    color:#fff;
     font-weight: 500;
-    border-color: var(--blue-3);
+    border-color: var(--sec-2);
 }
 .form-login a {
-    color: var(--neutral-3, #262F44);
+    color: var(--neutral-9);
     font-size: 16px;
     font-weight: 400;
 }
 .form-login a span {
     text-decoration-line: underline;
+    color: var(--sec-2);
 }
 .form-login .next {
     display: flex;
@@ -129,7 +140,7 @@ body {
     justify-content: center;
     padding: 15px 20px;
     border-radius: 30px;
-    background: var(--grid-blue, linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%));
+    background: var(--sec-2);
     color: var(--neutral-9, #EEF4FA);
     font-size: 16px;
     font-weight: 700;
@@ -165,7 +176,7 @@ body {
     cursor: pointer;
 }
 .elsana-button-selected {
-    background: var(--blue-3, #2E6FF4);
+    background: var(--sec-2);
     color: var(--neutral-9, #EEF4FA);
 }
 .taqasous {
@@ -187,7 +198,7 @@ body {
     cursor: pointer;
 }
 .taqasous-button-selected {
-    background: var(--grid-blue, linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%));
+    background: var(--sec-2);
     color: var(--neutral-9, #EEF4FA);
 }
 /* Path: website/styles/signup3.css */

@@ -1,5 +1,5 @@
 body {
-    background: var(--neutral-9, #EEF4FA);
+    background: var(--neutral-1);
 }
 .login-section {
     display: flex;
@@ -18,7 +18,7 @@ body {
 .login-section .login-container h2 {
     font-size: 18px;
     font-weight: 700;
-    color: var(--neutral-3, #262F44);
+    color: #fff;
     margin-bottom: 30px;
 }
 .login-section .login-container .content {
@@ -35,7 +35,7 @@ body {
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: var(--neutral-8, #E0E6EE);
+    background: var(--neutral-9, #E0E6EE);
     cursor: pointer;
     width: 100%;
     transition: all 0.3s ease-in-out;
@@ -68,10 +68,10 @@ body {
     border-radius: 5px;
 }
 .login-section .login-container .content .line span {
-    color: var(--neutral-3, #262F44);
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
-    background: var(--neutral-9, #EEF4FA);
+    background: var(--neutral-1, #EEF4FA);
     padding: 0 10px;
     position: relative;
 }
@@ -83,7 +83,7 @@ body {
 }
 .form-login input[type='text'],
 .form-login input[type='password'] {
-    color: var(--neutral-5, #58647C);
+    color: var(--neutral-8);
     font-size: 15px;
     padding: 15px 20px;
     font-weight: 500;
@@ -96,12 +96,12 @@ body {
 }
 .form-login input[type='text']:focus,
 .form-login input[type='password']:focus {
-    color: var(--neutral-1, #050B19);
+    color: var(--neutral-10, #050B19);
     font-weight: 500;
-    border-color: var(--blue-3);
+    border-color: var(--sec-2);
 }
 .form-login a {
-    color: var(--neutral-3, #262F44);
+    color: var(--neutral-7, #262F44);
     font-size: 15px;
     font-weight: 400;
 }
@@ -114,7 +114,7 @@ body {
     justify-content: center;
     padding: 15px 20px;
     border-radius: 30px;
-    background: var(--grid-blue, linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%));
+    background: var(--sec-2);
     color: var(--neutral-9, #EEF4FA);
     font-size: 16px;
     font-weight: 700;
@@ -129,7 +129,7 @@ body {
 }
 .login-section .signin-link {
     font-size: 15px;
-    color: var(--blue-3, #2E6FF4);
+    color: var(--neutral-7);
 }
 .login-section .signin-link span {
     text-decoration: underline;
