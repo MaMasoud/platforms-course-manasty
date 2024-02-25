@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عمل حساب جديد</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/signup.css">
+</head>
+<body dir="rtl">
+    <div class="overlay"></div>
+    <header>
+        <nav>
+            <h3>منصتي</h3>
+            <img style="width: 40px; height: 40px" src="../asseds/images/logo.png" />
+        </nav>
+    </header>
+    <section class="login-section">
+        <div class="login-container">
+            <p id="message"></p>
+            <h2>عمل حساب جديد</h2>
+            <div class="content" id="screen1">
+                <a href="#" class="google-login">
+                    <h3>تسجيل الدخول باستخدام جوجل</h3>
+                    <div class="icon">
+                        <img src="../asseds/images/google-icon.svg" alt="">
+                    </div>
+                </a>
+                <div class="line">
+                    <span>او ادخل لحسابك باستخدام</span>
+                </div>
+                <div action="" method="" class="form-login">
+                    <input type="text" name="username" id="username" placeholder="اكتب اسمك هنا (مثال) : محمد هاني احمد" />
+                    <input type="email" name="username" id="email" placeholder="اكتب ايميلك هنا: xxxx@gmail.com" />
+                    <input type="password" name="password" id="password1" placeholder="اكتب الباسورد هنا: xxxxxx" />
+                    <input type="password" name="password" id="password2" placeholder="اكتب الباسورد تاني هنا: xxxxxx" />
+                    <button onclick="sendTwoSecScreen(2)" class="next">التالي</button>
+                </div>
+                <a href="login.html">عندك حساب بالمنصة؟ <span>دوس هنا</span></a>
+            </div> 
+            <div class="content" id="screen2">
+                <div class="line">
+                    <span>اختار سنتك الدراسية</span>
+                </div>
+                <div action="" method="" class="form-login">
+                    <div class="elsana">
+                        <button class="elsana-button elsana-button-selected" onclick="selectElsana(this, 1)">1ث</button>
+                        <button class="elsana-button" onclick="selectElsana(this, 2)">2ث</button>
+                        <button class="elsana-button" onclick="selectElsana(this, 3)">3ث</button>
+                    </div>
+                    <div class="taqasous" id="taqasous-2">
+                        <button class="taqasous-button" value="2sei" onclick="selectTaqasous(this)">علمي</button>
+                        <button class="taqasous-button" value="2art" onclick="selectTaqasous(this)">أدبي</button>
+                    </div>
+                    <div class="taqasous" id="taqasous-3">
+                        <button class="taqasous-button" value="3math" onclick="selectTaqasous(this)">علمي رياضة</button>
+                        <button class="taqasous-button" value="3sin" onclick="selectTaqasous(this)">علمي علوم</button>
+                        <button class="taqasous-button" value="3art" onclick="selectTaqasous(this)">أدبي</button>
+                    </div>
+                    <button onclick="sendTwoSecScreen(3)" class="next">التالي</button>
+                </div>
+                <a href="login.html">عندك حساب بالمنصة؟ <span>دوس هنا</span></a>
+            </div> 
+            <div class="content" id="screen3">
+                <div class="form-login">
+                    <!-- <label for="fileInput" class="upload-your-photo">
+                        <div class="add-photo">
+                            <img src="../asseds/icons/ic_outline-account-circle.svg" alt="">
+                            <span>أختار صورة</span>
+                        </div>
+                        <input type="file" id="fileInput" name="fileInput">
+                    </label> -->
+                    <select name="city" id="city" >
+                        <option value="1">القاهرة</option>
+                        <option value="2">الجيزة</option>
+                        <option value="3">الاسكندرية</option>
+                        <option value="4">الدقهلية</option>
+                        <option value="5">البحر الاحمر</option>
+                        <option value="6">البحيرة</option>
+                        <option value="7">الفيوم</option>
+                        <option value="8">الغربية</option>
+                        <option value="9">الاسماعيلية</option>
+                        <option value="10">المنوفية</option>
+                        <option value="11">المنيا</option>
+                        <option value="12">القليوبية</option>
+                        <option value="13">الوادي الجديد</option>
+                        <option value="14">السويس</option>
+                        <option value="15">اسوان</option>
+                        <option value="16">اسيوط</option>
+                        <option value="17">بني سويف</option>
+                        <option value="18">بورسعيد</option>
+                        <option value="19">دمياط</option>
+                        <option value="20">الشرقية</option>
+                        <option value="21">جنوب سيناء</option>
+                        <option value="22">كفر الشيخ</option>
+                        <option value="23">مطروح</option>
+                        <option value="24">الاقصر</option>
+                        <option value="25">قنا</option>
+                        <option value="26">شمال سيناء</option>
+                        <option value="27">سوهاج</option>
+                    </select>
+                    <input type="date" id="dateInput" name="dateInput" placeholder="تاريخ الميلاد">
+                    <input type="text" name="phone" id="phone" placeholder="رقم الهاتف الطالب" />
+                    <input type="text" name="phone-parent" id="phone-parent" placeholder="رقم الهاتف ولي الامر" />
+                    <button onclick="sendTwoSecScreen(2)" class="next">التالي</button>
+                </div>
+                <a href="login.html">عندك حساب بالمنصة؟ <span>دوس هنا</span></a>
+            </div>
+        </div>
+    </section>
+    <script src="./javascript/signup.js"></script>
+</body>
+</html>

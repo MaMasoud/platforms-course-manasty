@@ -1,0 +1,101 @@
+.content {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.my-settings {
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--Neutral-9, #EEF4FA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    min-width: 400px;
+
+    /* drop */
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+}
+.my-settings .account-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.my-settings .account-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.my-settings .account-name, .my-settings .account-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.my-settings .account-name a, .my-settings .account-category a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 10px;
+}
+.my-settings .account-name a:hover, .my-settings .account-category a:hover {
+    background-color: var(--Neutral-8, #D8E1F3);
+}
+.my-settings .account-name h3 {
+    color: var(--Neutral-3, #262F44);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+.my-settings .account-category h3 {
+    color: var(--Neutral-4);
+    text-align: center;
+    font-size: 23px;
+    font-weight: 400;
+}
+.my-settings .edit {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--grid-blue, linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%));
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    color: var(--Neutral-9, #EEF4FA);
+    font-size: 16px;
+    font-weight: 700;
+}
+.my-settings .edit:hover {
+    opacity: 0.8;
+}
+.my-settings .delete {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background: var(--Error-3, #E62836);
+    font-family: Noto Sans Arabic;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    color: var(--Neutral-9, #EEF4FA);
+    font-size: 16px;
+    font-weight: 700;
+}
+.my-settings .delete:hover {
+    background: var(--Error-4, #AC0212);
+}

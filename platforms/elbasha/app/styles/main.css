@@ -1,20 +1,18 @@
 /* Start Global Rules */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-    --neutral-2: #13182B;
     --neutral-3: #262F44;
-    
+    --Neutral-5: #58647C;
     --neutral-7: #C6D0E0;
     --neutral-8: #E0E6EE;
     --neutral-9: #EEF4FA;
     --neutral-10: #F6F8FC;
 
     --blue-3: #2E6FF4;
+    --blue-4: #89BAF8;
 
     --sec-1: #E0B51D;
     --sec-2: #F4CB3C;
-
-    --Error-3: #E62836;
 
     --grid-blue: linear-gradient(282deg, #1031D0 0%, #2E6FF4 50%, #89BAF8 100%);
 }
@@ -30,7 +28,6 @@ html {
 }
 body {
     font-family: 'Noto Sans Arabic', sans-serif;
-    user-select: none;
 }
 ul {
     list-style: none;
@@ -135,14 +132,14 @@ header nav h3 {
     width: fit-content;
 }
 .main-lable .circle {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: var(--sec-2, #F4CB3C);
 }
 .main-lable h3 {
     color: #FFF;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     padding: 0 15px;
 }

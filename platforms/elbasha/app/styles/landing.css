@@ -1,0 +1,104 @@
+body {
+    background-color: var(--blue-3);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-image: url(/asseds/images/shapes.png);
+    z-index: 1;
+    opacity: 0.1;
+}
+.header {
+    height: 100vh;
+    z-index: 2;
+    position: relative;
+}
+.header .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+.header nav .logo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.header nav .logo h3 {
+    color: var(--blue-5, #EFF5FD);
+    font-size: 24px;
+    font-weight: 600;
+}
+.header nav span a{
+    color: var(--neutral-7, #C6D0E0);
+    font-size: 12px;
+}
+.header .content {
+    text-align: center;
+    width: 100%;
+}
+.header .content .image {
+    width: 100%;
+}
+.header .content .image img {
+    width: 100%;
+}
+.header .content .text h1{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.header .content .text p {
+    color: var(--neutral-7, #C6D0E0);
+    font-size: 14px;
+    font-weight: 500;
+}
+.header .next {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+.header .next .steps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.header .next .steps .step {
+    width: 30px;
+    height: 5px;
+    border-radius: 16px;
+    background: var(--sec-5, #F3EED8);
+    transition: all 0.3s ease-in-out;
+}
+.header .next .steps .select {
+    background: var(--sec-2, #F4CB3C);
+}
+.header .next button {
+    width: 100%;
+    color: var(--neutral-9, #EEF4FA);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 20px;
+    border-radius: 39px;
+    background: var(--sec-1, #E0B51D);
+    border: none;
+}
+#content-2, #content-3, #next-2, #next-3 {
+    display: none;
+}

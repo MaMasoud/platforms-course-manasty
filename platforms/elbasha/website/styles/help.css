@@ -1,0 +1,102 @@
+.help {
+    padding: 50px 0px;
+    text-align: center;
+}
+.help h1 {
+    color: var(--Neutral-3, #262F44);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.help .help-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.help .help-items a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--Neutral-9, #EEF4FA);
+
+    /* drop */
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+    transition: all 0.1s ease-in-out;
+}
+.help .help-items a:hover {
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.50);
+    background: var(--Neutral-10, #F6F8FC);
+}
+.help .help-items a span {
+    color: var(--Neutral-3, #262F44);
+    text-align: center;
+    font-family: Noto Sans Arabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.q-a .q-a-items {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.q-a .q-a-items .q-a-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background: var(--Neutral-9, #EEF4FA);
+    cursor: pointer;
+    border: none;
+
+    /* drop */
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+    transition: all 0.1s ease-in-out;
+
+}
+.q-a .q-a-items .q-a-item:hover {
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.50);
+    background: var(--Neutral-10, #F6F8FC);
+}
+.q-a .q-a-items .q-a-item .q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.q-a .q-a-items .q-a-item .q h4 {
+    color: var(--Neutral-3, #262F44);
+    font-size: 20px;
+    font-weight: 700;
+}
+.q-a .q-a-items .q-a-item .q .arrow {
+    transition: all 0.3s ease-in-out;
+}
+.q-a .q-a-items .q-a-item .q .arrow.active {
+    transform: rotate(180deg);
+}
+.q-a .q-a-items .q-a-item .a {
+    display: none;
+    color: var(--Neutral-4, #4B5D7A);
+    font-size: 16px;
+    Font-weight: 600;
+    line-height: 1.5;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.a.show {
+    display: block;
+    max-height: 1000px; /* Adjust the max-height value based on your content */
+    opacity: 1;
+}

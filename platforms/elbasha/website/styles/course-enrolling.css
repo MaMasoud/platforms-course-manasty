@@ -1,0 +1,294 @@
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+}
+header nav .back-button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 20px;
+    border-radius: 26px;
+    border: 1px solid var(--blue-3, #2E6FF4);
+    color: var(--blue-3, #2E6FF4);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+header nav .back-button a:hover{
+    background: var(--blue-3, #2E6FF4);
+    color: var(--white-1, #FFFFFF);
+}
+header nav .back-button svg path {
+    fill: var(--blue-3, #2E6FF4);
+    transition: all 0.3s ease-in-out;
+}
+header nav .back-button a:hover svg path{
+    fill: var(--white-1, #FFFFFF); 
+}
+header nav .logo {
+    width: fit-content; 
+}
+
+/* ----------------------------------------------------------- */
+main .sidebar {
+    width: 400px;
+    display: block;
+}
+.side-lable {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: var(--blue-3, #2E6FF4);
+    color: var(--Neutral-10, #F6F8FC);
+    font-size: 14px;
+    font-weight: 700;
+}
+.accordion-menu {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: none;
+    box-shadow: 0px 4px 6px 0px rgba(37, 114, 230, 0.20);
+}
+
+.accordion-menu li:last-child .dropdown {
+    border-bottom: 0;
+}
+
+
+.accordion-menu li.active .dropdown .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    cursor: pointer;
+    border-bottom: 1px solid var(--Neutral-7, #C6D0E0);
+    background: var(--Neutral-8, #E0E6EE);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px 0px rgba(37, 114, 230, 0.20);
+    color: var(--Neutral-3, #262F44);
+    font-family: Noto Sans Arabic;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown:hover {
+    background: var(--Neutral-8, #E4EAF2);
+}
+.dropdown h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 320px;
+}
+
+.dropdown i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+
+.dropdown .arrow {
+    right: 12px;
+    left: auto;
+    width: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.submenuItems {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.accordion-menu li.active .submenuItems {
+    max-height: 1000px; /* Adjust the value based on your content */
+}
+
+.submenuItems a, .submenuItems .closed-lesson {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--Neutral-9, #EEF4FA);
+    border-bottom: 1px solid var(--Neutral-7, #C6D0E0);
+    font-weight: 600;
+    padding: 20px;
+    transition: background 0.3s ease-out;
+    font-size: 14px;
+    
+
+    color: var(--Neutral-4, #3B4459);
+}
+
+.submenuItems a:hover, .submenuItems .closed-lesson:hover {
+    background: var(--Neutral-8, #E4EAF2);
+}
+
+.submenuItems a.watch-now {
+    background: var(--blue-6, #D4E7FF);
+}
+
+.submenuItems .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.submenuItems .info h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 280px;
+}
+
+
+
+
+
+.round {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .round label {
+    background-color: transparent;
+    border: 1px solid var(--Neutral-5, #58647C);;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .round label:after {
+    border: 2px solid var(--Neutral-10, #F6F8FC);
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    left: 3px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transform: rotate(-45deg);
+    width: 10px;
+  }
+  
+  
+
+  .round input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .round input[type="checkbox"]:checked + label {
+    background-color: var(--blue-3, #2E6FF4);
+    border-color: var(--blue-3, #2E6FF4);
+  }
+  
+  .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+
+
+
+/* ----------------------------------------------------------- */
+main .content {
+    margin-right: 400px;
+    padding: 0;
+}
+.content .video {
+    position: relative;
+    width: 100%;
+    max-width: 1400px; /* Set maximum width to 1200px */
+    margin: 0 auto; /* Center the container horizontally */
+    aspect-ratio: 16 / 9;
+}
+.content .video iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    aspect-ratio: 16 / 9;
+}
+
+/* ----------------------------------------------------------- */
+
+.content .name-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin-top: 30px;
+}
+.content .name-buttons .name {
+    color: var(--Neutral-3, #262F44);
+    font-size: 24px;
+    font-weight: 700;
+}
+.content .name-buttons .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.content .name-buttons .buttons .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--blue-3, #2E6FF4);
+    color: var(--Neutral-10, #F6F8FC);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.content .name-buttons .buttons .btn:hover {
+    background: var(--blue-4, #4C9AFF);
+}
+.content .name-buttons .buttons .btn svg.next {
+    transform: rotate(180deg);
+}
+.content .name-buttons .buttons .btn svg path {
+    fill: var(--Neutral-10, #F6F8FC);
+    transition: all 0.3s ease-in-out;
+}
+.content .name-buttons .buttons .btn:hover svg path {
+    fill: var(--Neutral-10, #F6F8FC);
+}
+
+.content .description {
+    padding: 30px;
+}
+.content .description h3 {
+    color: var(--Neutral-3, #262F44);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.content .description p {
+    color: var(--Neutral-5, #58647C);
+    font-size: 16px;
+    font-weight: 500;
+    /* line-height: 1.5; */
+}
+/* ----------------------------------------------------------- */
+
+
+/* Ask your teacher soon */
