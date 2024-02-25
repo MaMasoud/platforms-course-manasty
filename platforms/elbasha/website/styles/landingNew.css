@@ -179,6 +179,7 @@ body {
 }
 .download-app-img img {
     height: 100%;
+    max-width: 100%;
 }
 .download-app-content {
     width: 40%;
@@ -452,7 +453,7 @@ body {
         gap: 5px;
     }
     .courses {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     .section-info .first {
         flex-direction: column-reverse;
@@ -468,6 +469,9 @@ body {
         font-size: 10px;
     }
     .section-info .first .img, .section-info .sec .img{
+        width: 100%;
+    }
+    .section-info .first .img img, .section-info .sec .img img{
         width: 100%;
     }
     .section-info .sec {
