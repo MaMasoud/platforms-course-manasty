@@ -1,9 +1,12 @@
 /* Start Global Rules */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
+    --neutral-1: #050B19;
     --neutral-2: #13182B;
     --neutral-3: #262F44;
-    
+    --neutral-4: #3B4459;
+    --neutral-5: #58647C;
+    --neutral-6: #8D98AF;
     --neutral-7: #C6D0E0;
     --neutral-8: #E0E6EE;
     --neutral-9: #EEF4FA;
@@ -65,7 +68,7 @@ a {
 /* End Global Rules */
 /* Start Header */
 header {
-    background: #000000;
+    background: #090909;
     border-bottom: 1px solid var(--sec-2);
     box-shadow: 0 7px 15px 0 #ef681f66;
     width: 100%;

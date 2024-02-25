@@ -1,5 +1,5 @@
 body {
-    background: var(--neutral-10, #F6F8FC);
+    background: var(--neutral-2);
 }
 header {
     display: block;
@@ -53,11 +53,11 @@ header nav .header-info .account .username {
     font-size: 12px;
 }
 header nav .header-info .account .username .welcome {
-    color: var(--neutral-6, #8D98AF);
+    color: var(--neutral-10);
     font-weight: 400;
 }
 header nav .header-info .account .username .name {
-    color: var(--neutral-5, #58647C);
+    color: var(--neutral-7);
     font-weight: 500;
     margin-top: -5px;
 }
@@ -73,7 +73,7 @@ header nav .header-info .user-info .wallet {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: var(--neutral-3, #262F44);
+    color: var(--neutral-8, #262F44);
     font-size: 14px;
     font-weight: 600;
     border: none;
@@ -84,7 +84,7 @@ header nav .header-info .user-info .wallet {
     border-radius: 10px;
 }
 header nav .header-info .user-info .wallet:hover {
-    background-color: var(--neutral-8, #F2F4F8);
+    background-color: var(--neutral-3);
 }
 header nav .header-info .user-info .notification {
     display: flex;
@@ -96,7 +96,7 @@ header nav .header-info .user-info .notification {
     position: relative;
 }
 header nav .header-info .user-info .notification:hover {
-    background-color: var(--neutral-8, #F2F4F8);
+    background-color: var(--neutral-3);
 }
 header nav .header-info .user-info .notification h5 {
     color: var(--neutral-9, #EEF4FA);
@@ -213,8 +213,8 @@ main .sidebar {
     right: 0;
     width: 300px;
     height: calc(100vh - 70px);
-    border-left: 1px solid var(--neutral-7, #C6D0E0);
-    background: var(--neutral-9, #EEF4FA);
+    border-left: 1px solid var(--neutral-4);
+    background: var(--neutral-3, #EEF4FA);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -233,14 +233,14 @@ main .sidebar .sidebar-item img {
     height: 24px;
 }
 main .sidebar .sidebar-item h5 {
-    color: var(--neutral-3, #262F44);
+    color: var(--neutral-10);
     font-weight: 500;
 }
 main .sidebar .sidebar-item:hover {
-    background: var(--neutral-8, #F2F4F8);
+    background: var(--neutral-2);
 }
 main .sidebar .sidebar-item.selected {
-    background: var(--neutral-10, #F2F4F8);
+    background: var(--neutral-2);
 }
 main .content {
     width: calc(100% - 300px);
@@ -293,7 +293,7 @@ main .content {
     }
 }
 .header-dashboard {
-    color: var(--Neutral-3, #262F44);
+    color: #fff;
     font-size: 18px;
     font-weight: 700;
     margin: 20px auto;

@@ -63,13 +63,13 @@ main .content {
     position: relative;
     cursor: pointer;
     border-radius: 30px 10px 10px 10px;
-    background: #FFF;
-    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+    background: var(--neutral-7);
+    box-shadow: 0 0px 15px 0 #ffffff42;
     transition: 0.3s ease-in-out;
 }
 .courses .course:hover {
     transform: translateY(-10px);
-    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.50);
+    box-shadow: 0 0px 25px 0 #ffffff7b;
     opacity: 0.9;
     filter: saturate(1.5);
     filter: brightness(1.1);
@@ -107,18 +107,18 @@ main .content {
     font-weight: 400;
 }
 .courses .course .info .time{
-    background: var(--neutral-2, #13182B);
+    background: var(--neutral-3, #13182B);
     color: var(--neutral-10, #F6F8FC);
     padding: 0px 15px;
 }
 .courses .course .info .classes{
-    background: var(--blue-3, #2E6FF4);
+    background: var(--neutral-3, #13182B);
     color: var(--neutral-10, #F6F8FC);
     padding: 0px 15px;
 }
 .courses .course .info .exams {
-    background: var(--blue-4, #89BAF8);
-    color: var(--neutral-4, #3B4459);
+    background: var(--neutral-3);
+    color: #fff;
     font-weight: 600;
     padding: 0px 15px;
 }
@@ -133,7 +133,7 @@ main .content {
 }
 .courses .course .course-price a {
     border-radius: 26px;
-    background: var(--blue-3, #2E6FF4);
+    background: var(--sec-2);
     padding: 0px 20px;
     color: #FFF;
     font-size: 16px;
