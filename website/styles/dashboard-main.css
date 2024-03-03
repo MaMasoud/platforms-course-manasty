@@ -148,3 +148,49 @@ main .content {
     font-size: 16px;
     font-weight: 700;
 }
+
+.section-trees {
+    padding: 50px 30px;
+}
+.section-trees .trees {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+.section-trees .trees .tree {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px 10px 30px 10px;
+    background: #FFF;
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.30);
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+.section-trees .trees .tree:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px 0px rgba(17, 36, 123, 0.50);
+    opacity: 0.9;
+    filter: saturate(1.5);
+    filter: brightness(1.1);
+}
+.section-trees .trees .tree img {
+    width: 100%;
+    border-radius: 30px 10px 30px 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+.section-trees .trees .tree h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--neutral-10, #F6F8FC);
+    font-size: 20px;
+}
